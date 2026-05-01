@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/context/AuthContext";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import { AuthAppShell } from "@/components/layout/AuthAppShell";
 
 export default function VerifyStatusPage() {
   const { profile, loading } = useAuth();
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-surface-container-lowest">
         <div className="animate-spin w-12 h-12 border-4 border-primary border-t-transparent rounded-full"></div>
       </div>
     );
@@ -26,60 +26,60 @@ export default function VerifyStatusPage() {
       case "verified":
         return (
           <>
-            <div className="w-20 h-20 bg-green-100 rounded-[32px] flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-green-600 text-4xl">check_circle</span>
+            <div className="w-24 h-24 bg-green-50 rounded-[40px] flex items-center justify-center mx-auto mb-8 shadow-xl shadow-green-500/5 border border-green-100">
+              <span className="material-symbols-outlined text-green-600 text-5xl font-black">check_circle</span>
             </div>
-            <h2 className="text-3xl font-black mb-4">Verification Successful!</h2>
-            <p className="text-on-surface-variant mb-10">
-              You are now a Verified Parent on Meet Fito. You can now host events, create groups, and lead meetups.
+            <h2 className="text-3xl font-black mb-4 tracking-tighter text-on-surface">Verification Successful!</h2>
+            <p className="text-on-surface-variant mb-10 font-medium leading-relaxed">
+              You are now a Verified Parent on Meet Fito. You can now host events, create groups, and lead meetups with full trust.
             </p>
-            <Link href="/profile">
-              <Button className="h-14 px-10 rounded-2xl font-bold">Go to Profile</Button>
+            <Link href="/profile" className="w-full block">
+              <Button className="w-full h-16 rounded-2xl font-black text-lg shadow-lg shadow-primary/20">Go to Profile</Button>
             </Link>
           </>
         );
       case "pending":
         return (
           <>
-            <div className="w-20 h-20 bg-amber-100 rounded-[32px] flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-amber-600 text-4xl">hourglass_empty</span>
+            <div className="w-24 h-24 bg-amber-50 rounded-[40px] flex items-center justify-center mx-auto mb-8 shadow-xl shadow-amber-500/5 border border-amber-100">
+              <span className="material-symbols-outlined text-amber-600 text-5xl font-black">hourglass_empty</span>
             </div>
-            <h2 className="text-3xl font-black mb-4">Under Review</h2>
-            <p className="text-on-surface-variant mb-10">
+            <h2 className="text-3xl font-black mb-4 tracking-tighter text-on-surface">Under Review</h2>
+            <p className="text-on-surface-variant mb-10 font-medium leading-relaxed">
               Your identity verification is being processed. This usually takes a few minutes but can take up to 24 hours. We'll notify you once it's complete.
             </p>
-            <Link href="/profile">
-              <Button variant="outline" className="h-14 px-10 rounded-2xl font-bold">Back to Profile</Button>
+            <Link href="/dashboard" className="w-full block">
+              <Button variant="secondary" className="w-full h-16 rounded-2xl font-black text-lg shadow-lg shadow-secondary/10">Back to Dashboard</Button>
             </Link>
           </>
         );
       case "rejected":
         return (
           <>
-            <div className="w-20 h-20 bg-red-100 rounded-[32px] flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-red-600 text-4xl">cancel</span>
+            <div className="w-24 h-24 bg-red-50 rounded-[40px] flex items-center justify-center mx-auto mb-8 shadow-xl shadow-red-500/5 border border-red-100">
+              <span className="material-symbols-outlined text-red-600 text-5xl font-black">cancel</span>
             </div>
-            <h2 className="text-3xl font-black mb-4">Verification Declined</h2>
-            <p className="text-on-surface-variant mb-10">
-              We couldn't verify your identity at this time. Please contact support at help@meetfito.com for more information or to try again.
+            <h2 className="text-3xl font-black mb-4 tracking-tighter text-on-surface">Verification Declined</h2>
+            <p className="text-on-surface-variant mb-10 font-medium leading-relaxed">
+              We couldn't verify your identity at this time. Please contact support at <span className="text-primary font-black">help@meetfito.com</span> for more information or to try again.
             </p>
-            <Link href="/profile">
-              <Button variant="outline" className="h-14 px-10 rounded-2xl font-bold">Back to Profile</Button>
+            <Link href="/verify" className="w-full block">
+              <Button className="w-full h-16 rounded-2xl font-black text-lg shadow-lg shadow-primary/20">Try Again</Button>
             </Link>
           </>
         );
       default:
         return (
           <>
-            <div className="w-20 h-20 bg-primary/10 rounded-[32px] flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-primary text-4xl">payment</span>
+            <div className="w-24 h-24 bg-primary/10 rounded-[40px] flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary/5 border border-primary/10">
+              <span className="material-symbols-outlined text-primary text-5xl font-black">payment</span>
             </div>
-            <h2 className="text-3xl font-black mb-4">Verification Required</h2>
-            <p className="text-on-surface-variant mb-10">
-              Complete the $5 verification payment to continue securing your identity.
+            <h2 className="text-3xl font-black mb-4 tracking-tighter text-on-surface">Verification Required</h2>
+            <p className="text-on-surface-variant mb-10 font-medium leading-relaxed">
+              Complete the $5 verification payment to continue securing your identity and unlocking all features.
             </p>
-            <Link href="/verify">
-              <Button className="h-14 px-10 rounded-2xl font-bold">Start Verification</Button>
+            <Link href="/verify" className="w-full block">
+              <Button className="w-full h-16 rounded-2xl font-black text-lg shadow-lg shadow-primary/20">Start Verification</Button>
             </Link>
           </>
         );
@@ -87,18 +87,20 @@ export default function VerifyStatusPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-surface-container-lowest">
-      <Navbar />
-      <main className="flex-grow flex items-center justify-center p-6">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-md w-full text-center bg-white p-12 rounded-[48px] border border-outline-variant shadow-2xl"
-        >
-          {renderContent()}
-        </motion.div>
-      </main>
-      <Footer />
-    </div>
+    <ProtectedRoute>
+      <AuthAppShell>
+        <div className="min-h-[60vh] flex items-center justify-center w-full">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", damping: 20, stiffness: 100 }}
+            className="max-w-md w-full text-center bg-white p-12 rounded-[56px] border border-outline-variant shadow-2xl relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-primary" />
+            {renderContent()}
+          </motion.div>
+        </div>
+      </AuthAppShell>
+    </ProtectedRoute>
   );
 }

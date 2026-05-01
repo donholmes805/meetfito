@@ -7,6 +7,7 @@ import {
   getDocs, 
   addDoc, 
   updateDoc, 
+  deleteDoc,
   query, 
   where, 
   serverTimestamp 
@@ -24,6 +25,7 @@ export interface LearningMaterial {
   fileType: string;
   accessLevel: "free" | "member" | "premium" | "coopOnly";
   uploadedBy: string;
+  uploadedByRole?: string;
   createdAt: any;
   updatedAt: any;
 }
@@ -63,5 +65,10 @@ export const materialService = {
     });
 
     return docRef.id;
+  },
+
+  async deleteMaterial(id: string) {
+    const docRef = doc(db, "materials", id);
+    await deleteDoc(docRef);
   }
 };

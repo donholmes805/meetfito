@@ -16,43 +16,35 @@ Meet Fito is a family-safe homeschool meetup platform where parents can find oth
 
 ## Implemented Pages & Features
 1.  **Landing Page**: Polished public homepage with features overview and branding.
-2.  **Authentication**: Firebase-ready Google and Email/Password sign-in.
+2.  **Authentication**: Firebase Google and Email/Password sign-in with RBAC.
 3.  **Parent Dashboard**: Profile management for parents and children.
-4.  **Discover**: Searchable meetup listings with category filters and map integration.
-5.  **Groups & Co-Ops**: Listing of local homeschool cooperatives.
+4.  **Discover**: Searchable meetup listings with category filters and integrated OpenStreetMap (Leaflet).
+5.  **Groups & Co-Ops**: Full lifecycle for local homeschool cooperatives.
 6.  **Learning Hub**: Resource library for sharing educational materials.
-7.  **Video Meetups**: Placeholder system for parent planning sessions (Jitsi/LiveKit ready).
-8.  **Safety & Verification**: Multi-step verification structure and safety guidelines.
-9.  **Admin Dashboard**: Platform analytics and management interface.
-10. **Fito Guide AI**: AI assistant integrated via API route.
+7.  **Video Meetups**: Fully integrated Whereby video hosting for parent planning.
+8.  **Safety & Verification**: Multi-step verification powered by Didit KYC and safety reporting.
+9.  **Admin Dashboard**: Advanced 14-tab command center with Promo Code management and Audit Logs.
+10. **Fito Guide AI**: AI assistant integrated via OpenRouter (Gemini 2.0 Flash).
+11. **Promo System**: Robust discount engine with per-user limits and expiration tracking.
 
-## Environment Variables Needed
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-OPENROUTER_API_KEY=
-NEXT_PUBLIC_SITE_URL=https://meetfito.com
-```
+## Environment Variables
+The platform requires several environment variables for production (configured in `apphosting.yaml` and Cloud Secret Manager):
+- Firebase Config (API Key, Project ID, etc.)
+- Stripe Keys (Secret, Webhook, Price IDs)
+- Didit KYC (API Key, Workflow ID)
+- Whereby Video (API Key)
+- OpenRouter (API Key)
 
-## Firebase Collections Used
-- `users`: Parent profiles and roles.
-- `children`: (Subcollection of users) Child profiles and interests.
-- `events`: Meetup details and attendee tracking.
-- `groups`: Co-op and group details.
-- `materials`: Learning hub resources.
-- `verification`: Safety verification status.
-- `videoRooms`: Video session metadata.
+## Deployment
+The project is configured for **Firebase App Hosting**. 
+- Rules: `firebase deploy --only firestore:rules,storage:rules`
+- Hosting: Automatic via GitHub connection to Firebase App Hosting.
 
-## Next Steps
-1.  **Firebase Deployment**: Run `firebase deploy` to push rules and hosting.
-2.  **OpenRouter Key**: Add `OPENROUTER_API_KEY` to `.env.local` to enable Fito Guide.
-3.  **Maps Integration**: Replace the map placeholder with `react-leaflet` or `maplibre-gl`.
-4.  **Video API**: Integrate Jitsi or LiveKit into the `videoRooms` system.
-5.  **Verification API**: Connect a KYC provider like Didit or Stripe Identity.
+## Platform Security
+- **RBAC**: Multi-tier access (Owner, Admin, Parent, Leader).
+- **Hardened Rules**: Strict Firestore rules preventing unauthorized field modifications.
+- **Audit Logging**: All administrative actions are logged for security and accountability.
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

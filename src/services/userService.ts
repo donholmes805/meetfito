@@ -1,5 +1,5 @@
 import { db } from "@/lib/firebase/firestore";
-import { doc, getDoc, updateDoc, setDoc, serverTimestamp } from "firebase/firestore";
+import { doc, getDoc, updateDoc, setDoc, serverTimestamp, collection, query, getDocs, orderBy, limit, where } from "firebase/firestore";
 
 export interface UserProfile {
   uid: string;
@@ -98,9 +98,39 @@ export const userService = {
     const q = query(collection(db, "users"), where("city", "==", city), limit(11));
     const querySnapshot = await getDocs(q);
     
-    // If less than 10 users in city, this user can be a founder
     if (querySnapshot.size <= 10) {
       await this.updateProfile(uid, { isLocalFounder: true });
     }
+  },
+
+  async getAllUsers(maxCount = 50): Promise<UserProfile[]> {
+    const q = query(collection(db, "users"), orderBy("createdAt", "desc"), limit(maxCount));
+    const snap = await getDocs(q);
+    return snap.docs.map(doc => doc.data() as UserProfile);
+  },
+
+  async searchUsers(searchTerm: string): Promise<UserProfile[]> {
+    // Basic search by email (Firestore doesn't support full-text search easily without Algolia)
+    // We'll search by exact email or try a range for name
+    const q = query(
+      collection(db, "users"), 
+      where("email", "==", searchTerm.toLowerCase().trim()),
+      limit(20)
+    );
+    const snap = await getDocs(q);
+    
+    if (snap.empty) {
+      // Try searching by displayName (prefix search)
+      const qName = query(
+        collection(db, "users"),
+        where("displayName", ">=", searchTerm),
+        where("displayName", "<=", searchTerm + "\uf8ff"),
+        limit(20)
+      );
+      const snapName = await getDocs(qName);
+      return snapName.docs.map(doc => doc.data() as UserProfile);
+    }
+    
+    return snap.docs.map(doc => doc.data() as UserProfile);
   }
 };

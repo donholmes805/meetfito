@@ -253,22 +253,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      {/* AI Assistant Floating Button */}
-      <div className="fixed bottom-10 right-10 z-[100] group">
-        <motion.div 
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="fito-gradient p-4 rounded-full shadow-2xl cursor-pointer relative"
-        >
-          <span className="material-symbols-outlined text-white text-3xl">psychology</span>
-          <div className="absolute inset-0 rounded-full animate-pulse bg-white/20"></div>
-        </motion.div>
-        <div className="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
-          <div className="glass-guide p-4 rounded-2xl shadow-xl border border-white/50 w-64 text-sm font-medium text-on-background">
-            "Hi! I'm Fito Guide. Need help planning a homeschool P.E. day or finding a local co-op?"
-          </div>
-        </div>
-      </div>
+
 
       <Footer />
     </div>

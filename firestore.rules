@@ -19,7 +19,9 @@ service cloud.firestore {
     }
 
     function isAdmin() {
-      return isAuthenticated() && (getRole() == 'admin' || getRole() == 'owner');
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (getRole() == 'admin' || getRole() == 'owner');
     }
 
     // Users Collection
@@ -53,9 +55,23 @@ service cloud.firestore {
       allow update, delete: if isAuthenticated() && (resource.data.hostId == request.auth.uid || isAdmin());
     }
 
+    // Event Requests
+    match /eventRequests/{requestId} {
+      allow read: if isAuthenticated() && (resource.data.requesterId == request.auth.uid || resource.data.hostId == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (resource.data.hostId == request.auth.uid || isAdmin());
+    }
+
     // Groups Collection
     match /groups/{groupId} {
       allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (resource.data.ownerId == request.auth.uid || isAdmin());
+    }
+
+    // Group Requests
+    match /groupRequests/{requestId} {
+      allow read: if isAuthenticated() && (resource.data.requesterId == request.auth.uid || resource.data.ownerId == request.auth.uid || isAdmin());
       allow create: if isAuthenticated();
       allow update, delete: if isAuthenticated() && (resource.data.ownerId == request.auth.uid || isAdmin());
     }
@@ -91,6 +107,30 @@ service cloud.firestore {
       allow read, update: if isAuthenticated() && resource.data.userId == request.auth.uid;
       allow create: if isAuthenticated();
       allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Promo Codes
+    match /promoCodes/{promoId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Promo Redemptions
+    match /promoRedemptions/{redemptionId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      allow create: if isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+
+    // Audit Logs
+    match /auditLogs/{logId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Platform Settings
+    match /platformSettings/{settingId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
     }
   }
 }

@@ -21,13 +21,28 @@ export const FitoGuideChat = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isPaywallOpen, setIsPaywallOpen] = useState(false);
+  const [isPrimary, setIsPrimary] = useState(false);
   const { user, profile } = useAuth();
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Singleton guard to prevent duplicate rendering
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if ((window as any).__FITO_GUIDE_MOUNTED__) {
+        return;
+      }
+      (window as any).__FITO_GUIDE_MOUNTED__ = true;
+      setIsPrimary(true);
+    }
+
     const handleToggle = () => setIsOpen(true);
     window.addEventListener('toggleFitoGuide', handleToggle);
-    return () => window.removeEventListener('toggleFitoGuide', handleToggle);
+    return () => {
+      window.removeEventListener('toggleFitoGuide', handleToggle);
+      if (typeof window !== 'undefined') {
+        (window as any).__FITO_GUIDE_MOUNTED__ = false;
+      }
+    };
   }, []);
 
   const scrollToBottom = () => {
@@ -78,6 +93,8 @@ export const FitoGuideChat = () => {
       setLoading(false);
     }
   };
+
+  if (!isPrimary) return null;
 
   return (
     <>

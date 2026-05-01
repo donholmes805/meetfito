@@ -92,6 +92,11 @@ export const eventService = {
     });
   },
 
+  async deleteEvent(id: string) {
+    const docRef = doc(db, "events", id);
+    await deleteDoc(docRef);
+  },
+
   async requestToJoin(eventId: string, userId: string, userName: string, hostId: string) {
     await addDoc(collection(db, "eventRequests"), {
       eventId,

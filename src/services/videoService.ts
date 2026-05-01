@@ -9,7 +9,8 @@ import {
   orderBy, 
   serverTimestamp,
   where,
-  updateDoc
+  updateDoc,
+  deleteDoc
 } from "firebase/firestore";
 
 export interface VideoRoom {
@@ -21,6 +22,7 @@ export interface VideoRoom {
   groupId?: string;
   eventId?: string;
   provider: "jitsi" | "livekit" | "daily" | "whereby";
+  providerRoomId?: string;
   roomName: string;
   roomUrl: string;
   scheduledAt: any;
@@ -88,5 +90,10 @@ export const videoService = {
   async updateRoomStatus(id: string, status: VideoRoom["status"]) {
     const docRef = doc(db, "videoRooms", id);
     await updateDoc(docRef, { status });
+  },
+
+  async deleteRoom(id: string) {
+    const docRef = doc(db, "videoRooms", id);
+    await deleteDoc(docRef);
   }
 };

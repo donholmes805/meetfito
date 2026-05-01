@@ -6,6 +6,7 @@ import {
   getDocs, 
   addDoc, 
   updateDoc, 
+  deleteDoc,
   query, 
   where, 
   serverTimestamp 
@@ -65,5 +66,18 @@ export const groupService = {
       status: "pending",
       createdAt: serverTimestamp(),
     });
+  },
+
+  async updateGroup(id: string, data: Partial<FitoGroup>) {
+    const docRef = doc(db, "groups", id);
+    await updateDoc(docRef, {
+      ...data,
+      updatedAt: serverTimestamp(),
+    });
+  },
+
+  async deleteGroup(id: string) {
+    const docRef = doc(db, "groups", id);
+    await deleteDoc(docRef);
   }
 };
