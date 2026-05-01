@@ -25,18 +25,47 @@ env:
     availability:
       - BUILD
       - RUNTIME
+  # Firebase Config (Manual overrides for code consistency)
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyBlJiWh4naH8V7bQEVFOyo9ZQS_m8WdFEE"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "meet-fito.firebaseapp.com"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "meet-fito"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "meet-fito.firebasestorage.app"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "577341585448"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:577341585448:web:8729e94fd6120089e11d1d"
+    availability:
+      - BUILD
+      - RUNTIME
+  # Stripe
   - variable: STRIPE_SECRET_KEY
     secret: STRIPE_SECRET_KEY
   - variable: STRIPE_WEBHOOK_SECRET
     secret: STRIPE_WEBHOOK_SECRET
-  - variable: DIDIT_API_KEY
-    secret: DIDIT_API_KEY
-  - variable: DIDIT_WEBHOOK_SECRET
-    secret: DIDIT_WEBHOOK_SECRET
-  - variable: WHEREBY_API_KEY
-    secret: WHEREBY_API_KEY
-  - variable: OPENROUTER_API_KEY
-    secret: OPENROUTER_API_KEY
+  - variable: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+    value: "pk_live_51S5ASJCKN6yXs0gZHYPFJVwPmhxkq14Q7HZ3mneWhePzlja5Ywths9cEDV2QcXaJ8anyod7pp9OD0bzLIrvpFSG400j7gFMovz"
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_PRICE_PRO_PARENT
     value: "price_1TSCJyCKN6yXs0gZJVzIFCvy"
     availability:
@@ -62,3 +91,24 @@ env:
     availability:
       - BUILD
       - RUNTIME
+  # Didit (KYC)
+  - variable: DIDIT_API_KEY
+    secret: DIDIT_API_KEY
+  - variable: DIDIT_WEBHOOK_SECRET
+    secret: DIDIT_WEBHOOK_SECRET
+  - variable: DIDIT_BASE_URL
+    value: "https://verification.didit.me"
+    availability:
+      - RUNTIME
+  - variable: DIDIT_WORKFLOW_ID
+    value: "fac3a7e1-4e23-43c6-b3a4-ee95ae5ffe3b"
+    availability:
+      - RUNTIME
+  # Whereby (Video)
+  - variable: WHEREBY_API_KEY
+    secret: WHEREBY_API_KEY
+  - variable: WHEREBY_WEBHOOK_SECRET
+    secret: WHEREBY_WEBHOOK_SECRET
+  # AI
+  - variable: OPENROUTER_API_KEY
+    secret: OPENROUTER_API_KEY
