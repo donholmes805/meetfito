@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "meet-fito-mvp-888"
+    "default": "meet-fito-mvp-888",
+    "production": "meet-fito"
   },
   "etags": {}
 }
