@@ -7,46 +7,58 @@ runConfig:
 env:
   - variable: NEXT_PUBLIC_SITE_URL
     value: "https://meetfito.com"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: NEXT_PUBLIC_VIDEO_PROVIDER
     value: "whereby"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: NEXT_PUBLIC_MAP_PROVIDER
     value: "openstreetmap"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: NEXT_PUBLIC_OPENSTREETMAP_ENABLED
     value: "true"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_SECRET_KEY
     secret: STRIPE_SECRET_KEY
-    availability: ["RUNTIME"]
   - variable: STRIPE_WEBHOOK_SECRET
     secret: STRIPE_WEBHOOK_SECRET
-    availability: ["RUNTIME"]
   - variable: DIDIT_API_KEY
     secret: DIDIT_API_KEY
-    availability: ["RUNTIME"]
   - variable: DIDIT_WEBHOOK_SECRET
     secret: DIDIT_WEBHOOK_SECRET
-    availability: ["RUNTIME"]
   - variable: WHEREBY_API_KEY
     secret: WHEREBY_API_KEY
-    availability: ["RUNTIME"]
   - variable: OPENROUTER_API_KEY
     secret: OPENROUTER_API_KEY
-    availability: ["RUNTIME"]
   - variable: STRIPE_PRICE_PRO_PARENT
     value: "price_1TSCJyCKN6yXs0gZJVzIFCvy"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_PRICE_COOP_LEADER
     value: "price_1TSCKXCKN6yXs0gZmQfqlRMX"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_PRICE_KYC_5
     value: "price_1TSCL5CKN6yXs0gZ8CaLvxZz"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_PRICE_EVENT_BOOST
     value: "price_1TSCLwCKN6yXs0gZFHhxfpIT"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
   - variable: STRIPE_PRICE_GROUP_BOOST
     value: "price_1TSCMRCKN6yXs0gZrSMFRU20"
-    availability: ["BUILD", "RUNTIME"]
+    availability:
+      - BUILD
+      - RUNTIME
