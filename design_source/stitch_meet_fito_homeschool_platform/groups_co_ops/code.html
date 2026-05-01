@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#386b01",
+                    "secondary-fixed-dim": "#9cd769",
+                    "surface": "#fff8f6",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#643f00",
+                    "on-background": "#2c160e",
+                    "tertiary-fixed": "#cee5ff",
+                    "outline": "#857462",
+                    "on-secondary-fixed": "#0d2000",
+                    "on-secondary-fixed-variant": "#285000",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#b7f481",
+                    "surface-container-highest": "#ffdbd0",
+                    "secondary-container": "#b7f481",
+                    "on-secondary-container": "#3e7109",
+                    "tertiary-fixed-dim": "#96ccff",
+                    "primary-fixed": "#ffddb5",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#001d32",
+                    "on-tertiary-fixed-variant": "#004a75",
+                    "on-tertiary-container": "#004d79",
+                    "on-primary-container": "#674100",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#ffede8",
+                    "on-error": "#ffffff",
+                    "surface-container": "#ffe9e3",
+                    "background": "#fff8f6",
+                    "inverse-primary": "#ffb957",
+                    "inverse-surface": "#442a22",
+                    "tertiary-container": "#76bfff",
+                    "surface-variant": "#ffdbd0",
+                    "surface-dim": "#fbd1c4",
+                    "outline-variant": "#d7c3ae",
+                    "primary-fixed-dim": "#ffb957",
+                    "error": "#ba1a1a",
+                    "tertiary": "#00639a",
+                    "error-container": "#ffdad6",
+                    "primary": "#835400",
+                    "surface-tint": "#835400",
+                    "on-surface-variant": "#524434",
+                    "primary-container": "#f9a825",
+                    "surface-container-low": "#fff1ed",
+                    "surface-container-high": "#ffe2da",
+                    "on-primary-fixed": "#2a1800",
+                    "surface-bright": "#fff8f6",
+                    "on-surface": "#2c160e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "mobile-margin": "24px",
+                    "base": "8px",
+                    "desktop-margin": "auto",
+                    "section-gap": "32px",
+                    "max-width": "1200px",
+                    "card-padding": "20px"
+            },
+            "fontFamily": {
+                    "display": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "label-caps": ["Lexend"],
+                    "badge-text": ["Lexend"],
+                    "h2": ["Lexend"]
+            },
+            "fontSize": {
+                    "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f6;
+            color: #2c160e;
+        }
+        .glass-guide {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background">
+<!-- TopAppBar -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-[60]">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500" data-icon="diversity_3">diversity_3</span>
+<span class="font-lexend font-bold tracking-tight text-xl font-extrabold text-amber-600 dark:text-amber-500">Meet Fito</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-lexend font-bold tracking-tight hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors Active: scale-95 duration-150 ease-in-out">
+                Ask Fito Guide
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-mobile-margin md:px-0 py-section-gap pb-32">
+<!-- Hero Section & CTA -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="max-w-2xl">
+<h1 class="font-h1 text-h1 text-on-background mb-2">Community Groups &amp; Co-Ops</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Build lasting bonds through shared learning and local homeschooling clusters.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-secondary text-on-primary h-12 px-8 rounded-full font-display text-body-md font-bold shadow-md hover:opacity-90 transition-all Active: scale-95">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                Create Co-Op
+            </button>
+</section>
+<!-- Tabs Navigation -->
+<div class="flex gap-8 border-b border-outline-variant mb-8 overflow-x-auto no-scrollbar">
+<button class="pb-4 px-2 border-b-4 border-secondary text-secondary font-display font-bold text-body-md whitespace-nowrap">
+                Nearby Co-Ops
+            </button>
+<button class="pb-4 px-2 border-b-4 border-transparent text-on-surface-variant hover:text-on-surface font-display font-medium text-body-md whitespace-nowrap">
+                My Groups
+            </button>
+<button class="pb-4 px-2 border-b-4 border-transparent text-on-surface-variant hover:text-on-surface font-display font-medium text-body-md whitespace-nowrap">
+                Pending Requests
+            </button>
+</div>
+<!-- Bento Grid for Co-Ops -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Large Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-[16px] shadow-sm border border-surface-container overflow-hidden flex flex-col md:flex-row group transition-all hover:shadow-md">
+<div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A diverse group of homeschool parents and children gathered in a sunlit community garden, engaged in a hands-on nature science lesson. The atmosphere is warm and welcoming with soft golden hour lighting casting gentle shadows. The visual style is clean and modern, emphasizing an organic community vibe with lush green plants and natural wood textures in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1HuXR9tH4P7FwPktogC6wJpHUlmJ9nQKbQ2jjIUo-bHpG2ankClQ3d0LUWPKsklDY9nhbJtlx4wOz-6cl5KPY-ZIXmZ_R2I38TQupum7IrioHplA_2o1TDxZJZYW-3nd-0KAH_j16_WRDKCBHcsNr8NhuQEo9VoAfgYV6FgCw3DsBagXZusMC_lSWRKFAuUvkac1MQcEX0SEapp-HbpdPMP7nK_3qMVF9irT_A_PWxROIdNi4K4MLU6PjKUD6AqczSNnyCh9pQCuU"/>
+<div class="absolute top-4 left-4 bg-secondary/90 text-white px-3 py-1 rounded-full text-badge-text font-badge-text backdrop-blur-sm">
+                        Verified Community
+                    </div>
+</div>
+<div class="md:w-3/5 p-card-padding flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-h2 text-h2 text-on-background">North Hills Nature Study</h2>
+<div class="flex items-center gap-1 bg-primary-container/20 text-on-primary-container px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-badge-text font-badge-text">Parent Lead</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-body-md mb-6 line-clamp-2">A long-term co-op focused on outdoor exploration and environmental sciences for ages 6-10.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-caps font-label-caps">Tues &amp; Thurs</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" data-icon="group">group</span>
+<span class="text-label-caps font-label-caps">12 Members</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<span class="text-label-caps font-label-caps">Maple Park</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+<span class="text-label-caps font-label-caps">Active 2+ Years</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-secondary text-on-primary py-3 rounded-xl font-display font-bold text-body-md hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Join Co-Op</button>
+<button class="p-3 border border-outline rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-[16px] shadow-sm border border-surface-container p-card-padding flex flex-col transition-all hover:shadow-md">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-body-md text-on-background">Lit &amp; Latte Parents</h3>
+<span class="text-badge-text font-badge-text text-secondary bg-secondary-fixed px-2 py-0.5 rounded">New Member Bonus</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-body-md mb-6 flex-grow">Book club and curriculum swap group meeting at local coffee shops.</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>Schedule</span>
+<span class="text-on-background">Monthly Sat</span>
+</div>
+<div class="flex items-center justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>Members</span>
+<span class="text-on-background">28 Active</span>
+</div>
+</div>
+<button class="w-full border-2 border-secondary text-secondary py-3 rounded-xl font-display font-bold text-body-md hover:bg-secondary-fixed transition-colors">Request to Join</button>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-[16px] shadow-sm border border-surface-container p-card-padding flex flex-col transition-all hover:shadow-md">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/30 flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="sports_soccer">sports_soccer</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-body-md text-on-background">PE for Homeschoolers</h3>
+<span class="text-badge-text font-badge-text text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Seasonal</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-body-md mb-6 flex-grow">A casual sports group focusing on teamwork and physical health for all ages.</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>Schedule</span>
+<span class="text-on-background">Wednesdays</span>
+</div>
+<div class="flex items-center justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>Members</span>
+<span class="text-on-background">45 Active</span>
+</div>
+</div>
+<button class="w-full border-2 border-secondary text-secondary py-3 rounded-xl font-display font-bold text-body-md hover:bg-secondary-fixed transition-colors">Request to Join</button>
+</div>
+<!-- Wide Secondary Card -->
+<div class="md:col-span-8 bg-surface-container-high rounded-[16px] p-card-padding flex flex-col md:flex-row items-center gap-8 border border-surface-container-highest">
+<div class="flex-1">
+<h2 class="font-h2 text-h2 text-on-background mb-2">Start Your Own Local Chapter</h2>
+<p class="text-body-md text-on-surface-variant mb-6">Can't find the perfect group? Fito helps you organize, recruit verified parents, and manage schedules for your own learning co-op.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full text-label-caps font-label-caps border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="shield">shield</span>
+                            Verified Members Only
+                        </div>
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full text-label-caps font-label-caps border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="event_repeat">event_repeat</span>
+                            Auto-scheduling
+                        </div>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-on-background text-surface-container-lowest px-10 py-4 rounded-xl font-display font-bold text-body-md hover:opacity-90 transition-all">
+                        Launch a Co-Op
+                    </button>
+</div>
+</div>
+</div>
+<!-- Discovery Filter Floating Bar (Contextual UI) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-xl border border-stone-200 px-6 py-3 rounded-full shadow-lg flex items-center gap-6 z-40 hidden md:flex">
+<div class="flex items-center gap-2 text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">
+<span class="material-symbols-outlined" data-icon="distance">distance</span>
+<span class="text-label-caps font-label-caps">Within 10 miles</span>
+</div>
+<div class="w-[1px] h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2 text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="text-label-caps font-label-caps">All Subjects</span>
+</div>
+<div class="w-[1px] h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2 text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_alt">filter_alt</span>
+<span class="text-label-caps font-label-caps">More Filters</span>
+</div>
+</div>
+</main>
+<!-- Fito Guide AI FAB (Material Style Guidance) -->
+<button class="fixed bottom-24 right-6 md:right-10 w-14 h-14 bg-gradient-to-br from-[#7C3AED] to-[#2563EB] rounded-full shadow-xl flex items-center justify-center text-white z-50 transition-all hover:scale-110 active:scale-95 group">
+<span class="material-symbols-outlined text-[28px] group-hover:rotate-12 transition-transform" data-icon="smart_toy">smart_toy</span>
+<div class="absolute -top-12 right-0 bg-white shadow-md rounded-lg px-3 py-1 text-badge-text font-badge-text whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none text-on-surface">
+            Find the right group for me
+        </div>
+</button>
+<!-- BottomNavBar -->
+<nav class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg fixed bottom-0 w-full z-50 border-t rounded-t-2xl border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)]">
+<div class="max-w-7xl mx-auto flex justify-around items-center px-4 pt-2 pb-safe-offset-2 h-16">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 dark:hover:text-green-300 transition-colors Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 dark:hover:text-green-300 transition-colors Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1 Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 dark:hover:text-green-300 transition-colors Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 dark:hover:text-green-300 transition-colors Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#386b01",
+                        "secondary-fixed-dim": "#9cd769",
+                        "surface": "#fff8f6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#643f00",
+                        "on-background": "#2c160e",
+                        "tertiary-fixed": "#cee5ff",
+                        "outline": "#857462",
+                        "on-secondary-fixed": "#0d2000",
+                        "on-secondary-fixed-variant": "#285000",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#b7f481",
+                        "surface-container-highest": "#ffdbd0",
+                        "secondary-container": "#b7f481",
+                        "on-secondary-container": "#3e7109",
+                        "tertiary-fixed-dim": "#96ccff",
+                        "primary-fixed": "#ffddb5",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "on-tertiary-container": "#004d79",
+                        "on-primary-container": "#674100",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#ffede8",
+                        "on-error": "#ffffff",
+                        "surface-container": "#ffe9e3",
+                        "background": "#fff8f6",
+                        "inverse-primary": "#ffb957",
+                        "inverse-surface": "#442a22",
+                        "tertiary-container": "#76bfff",
+                        "surface-variant": "#ffdbd0",
+                        "surface-dim": "#fbd1c4",
+                        "outline-variant": "#d7c3ae",
+                        "primary-fixed-dim": "#ffb957",
+                        "error": "#ba1a1a",
+                        "tertiary": "#00639a",
+                        "error-container": "#ffdad6",
+                        "primary": "#835400",
+                        "surface-tint": "#835400",
+                        "on-surface-variant": "#524434",
+                        "primary-container": "#f9a825",
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-high": "#ffe2da",
+                        "on-primary-fixed": "#2a1800",
+                        "surface-bright": "#fff8f6",
+                        "on-surface": "#2c160e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "mobile-margin": "24px",
+                        "base": "8px",
+                        "desktop-margin": "auto",
+                        "section-gap": "32px",
+                        "max-width": "1200px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "h1": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Lexend"],
+                        "badge-text": ["Lexend"],
+                        "h2": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fff8f6;
+            color: #2c160e;
+        }
+        .glass-assistant {
+            background: rgba(118, 191, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar Shell -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500 text-2xl" data-icon="diversity_3">diversity_3</span>
+<h1 class="font-lexend font-bold tracking-tight text-xl font-extrabold text-amber-600 dark:text-amber-500">Meet Fito</h1>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-lexend font-bold tracking-tight text-sm hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors Active: scale-95 duration-150 ease-in-out">
+                Ask Fito Guide
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-mobile-margin md:px-desktop-margin py-section-gap pb-32">
+<!-- Hero Section / Explainer -->
+<section class="mb-section-gap flex flex-col md:flex-row md:items-center gap-8 bg-surface-container-low rounded-3xl p-8 border border-surface-container shadow-sm">
+<div class="flex-1">
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-badge-text font-badge-text mb-4">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                    Verified Parent Community
+                </span>
+<h2 class="font-h1 text-h1 text-on-background mb-4">Parent Video Meetups</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Parent video meetups are designed for planning, co-op coordination, and family introductions. Build lasting bonds in a secure, faces-first environment.
+                </p>
+<div class="mt-8 flex flex-wrap gap-4">
+<button class="flex items-center gap-3 bg-secondary text-on-primary px-8 py-4 rounded-2xl font-display font-bold shadow-lg hover:shadow-xl transition-all Active: scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="video_call" style="font-variation-settings: 'FILL' 1;">video_call</span>
+                        Create Video Room
+                    </button>
+<button class="flex items-center gap-2 bg-surface-container-highest text-on-surface px-6 py-4 rounded-2xl font-display font-bold hover:bg-surface-variant transition-colors border border-outline-variant/20">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                        Schedule Future Room
+                    </button>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-full md:w-80 h-56 rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A diverse group of cheerful parents smiling during a high-quality video conference call, displayed on a sleek laptop screen. The environment is a cozy, brightly lit home office with soft morning light streaming through a window. The overall aesthetic is warm, modern, and communal, reflecting a safe and inviting digital space for homeschool coordination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe5ZgyQFEqi14CEactv_9az2z65xEhmk-SlhueqSzFNro2IhTTk5DEEizpCfJALoGuLN8HnBcuWDcsWkhEvEk_ba0YJoar-tzVnrlCiv_FlHK_T9YjHdOb7RKbabGM05_KN2n1Hlz1NswMjuYm7I-WmWog76JkhpUrz7OokvPN9lfljdaHL61Ykz1undrdu28YiqxovhGuf54upZCtDFjp706c7dx_-_9e6o0w61xAhj-Ejf2hTDShsIj_F7bQMOYAL4N3FOUnl8OK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+<span class="text-white text-badge-text font-badge-text flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span> 12 Parents Online
+                    </span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Scheduled & Active Rooms -->
+<div class="lg:col-span-2 space-y-6">
+<h3 class="font-h2 text-h2 px-2 flex items-center gap-3">
+                    Active &amp; Upcoming Rooms
+                    <span class="bg-secondary-container text-on-secondary-container text-badge-text px-2 py-0.5 rounded-full">3 Live</span>
+</h3>
+<!-- Active Room Card -->
+<div class="bg-surface-container-lowest p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container-high transition-transform hover:-translate-y-1">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A vibrant outdoor setting with families gathering for a community co-op activity. The photo captures children laughing and parents engaging in conversation under soft, dappled sunlight. The style is naturalistic and joyful, emphasizing community growth and safe social interactions for homeschool families." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVWo4SEabp0OViVue00Mbqm3-ru65yCvKO7kNWLjNESPOqTjOdl1gRk8Ui6ngFhF0PQEYeWPM0nIiHXSABapKnamrtGmyhAWsgUa4LiSVxoMiPZMeh8t13RhDZ6WaBaM1jbzHbHoHLRRSdxoT0pfEUSIi3mtYV2zFPF8jrQ2kJKV01BVURcYMnUDXyFbDeNxqXPrLhSXhO3PUTzg95YWyhQt_zfPeUOlggopXbHffBp6a0DVcC9nJipNvW-cdwAHICEStUFXzxKdB2"/>
+</div>
+<div>
+<h4 class="font-display font-bold text-lg text-on-background">Science Co-op Planning: Grade 3-5</h4>
+<p class="text-on-surface-variant text-sm mt-1">Host: Sarah Jenkins • 8 participants</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-stone-200 overflow-hidden"><img class="w-full h-full object-cover" data-alt="Profile headshot of a smiling mother in a casual setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5GF_L17Qgbzj6skOREDrSqzuSqXYu58B7t6SIFviu81kP4MgjZCXXT6oILF9M0H7_7Xdk4-5LLLdJSF_M1yt6pX2icB9ozJtuTle9xWlshuJZvuMDFaM138sX8ubpJ6OpdBom6qTvmBf6JKwNgeLBYRQ6f9VOvVACH61lh5AdwlEh6un041Ij7KJ_TS0DtHQtTjZkGBspM-ijmj0_-B_D-lr3EbTQdYSHxUzYxag_ITYUh8Q96iR8-Vv9nPsuQ5W5V8s16qspEL6g"/></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-stone-200 overflow-hidden"><img class="w-full h-full object-cover" data-alt="Profile headshot of a friendly father wearing glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5tkyEa1-Gi2bJ16zvn3zGCU1DQS9sVqK-bxW2S1zxIOTEQCyCYfmrcNwOGTQIp3Iqu7-rC7ETCblHsl79C544522lrb2I-uaZ0IW9G2GFf1-LhpCMjmNOEcPAJ-uSselNRk6DjOa5ryp98iQTfn_lJcHjtWdgUx4FJwBtcZPCWX0rBzMhsKKthcyylBLtfzNctu0CGwDhoYu48iTdkXaxmKiwgvt1EtptvWPXBZd2FifnhfpgAXy5e-6Slxzs-qtZLml1T_HIRegZ"/></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-stone-300 flex items-center justify-center text-[8px] font-bold">+5</div>
+</div>
+<span class="text-xs text-secondary font-bold">JOINING NOW</span>
+</div>
+</div>
+</div>
+<button class="bg-secondary text-on-primary px-6 py-3 rounded-xl font-display font-bold flex items-center gap-2 shadow-sm hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="videocam" style="font-variation-settings: 'FILL' 1;">videocam</span>
+                            Join Room
+                        </button>
+</div>
+</div>
+<!-- Scheduled Room Card -->
+<div class="bg-surface-container-lowest p-card-padding rounded-[16px] shadow-sm border border-surface-container-low opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="font-display font-bold text-lg text-on-background">Weekend Nature Hike Introduction</h4>
+<p class="text-on-surface-variant text-sm mt-1">Scheduled for Today • 4:00 PM (In 2 hours)</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs text-outline font-medium uppercase tracking-wider">Verified Parents Only</span>
+</div>
+</div>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-display font-medium border border-outline-variant/30 hover:bg-surface-variant transition-colors">
+                            Set Reminder
+                        </button>
+</div>
+</div>
+<!-- LiveKit Style Placeholder -->
+<div class="relative aspect-video rounded-3xl overflow-hidden bg-slate-900 border-4 border-surface-container shadow-2xl group">
+<div class="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1 p-1">
+<!-- Remote User 1 -->
+<div class="relative bg-slate-800 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A medium close-up of a woman in a bright, modern kitchen environment, participating in a video call. She is listening intently with a warm expression. The background is softly blurred to ensure focus on her face, maintaining a clean and professional look for a virtual meetup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-PPWTHFkD8mAbM37bxoy1-32a2zEqjEHFo0J8Cr-M3W7lXRBBlM6polu9o4j-13C8QXYJ3fFEiPxrNvJh0VwOZfjqRuH-u978WBMew-k7B9xeFZjl7OqhAzKjwrdqQ_7tb_gcogOVUnRvAHjpPn6ZepTP5-67ZxECgLGZI8uSPuwUPTQEq5CAhv6svqGC1tcs4DVpCs5JyqYjYujl1Vt3rSOaDgmES1Cf-RO1WHWbSXa3W72yaxuSRro2l9AYaKYtNlDOlk-d-LeG"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-black/40 backdrop-blur-md rounded text-white text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic_off">mic_off</span> Jane Doe
+                            </div>
+</div>
+<!-- Remote User 2 -->
+<div class="relative bg-slate-800 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A man in his early 40s with a friendly smile, sitting in a home office with bookshelves in the background. He is participating in a video meeting, and the lighting is soft and natural. The image exudes a sense of professional yet warm educational collaboration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSv3mrf32W34rih79z3LBiCmf-DtcEV4H_wjEsaAEWp9i4Engf9PXI8b2KwiTy0mIPBKZX-h-j8VLSu1bzufIK2XSw3EAVBhJnN1FCgXvdBODjbLklLYcuGjv-HMMuZ8LAwQM7L8-zfHExOBvFxH83G08TeINvQh539C22M9imO9R9M-218NzILn8-FFgDOeJM1rwJUqTH5U9ExKQb-J2xABsvnH2PKf1n05rQisMJATVzLqz6Ssv2-aSjGM55WwxlW0Ag4mLw0lYw"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-black/40 backdrop-blur-md rounded text-white text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-green-400" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span> Mike Smith
+                            </div>
+</div>
+<!-- Remote User 3 -->
+<div class="relative bg-slate-800 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a woman in a brightly lit studio setting, looking towards the camera during a virtual session. Her expression is helpful and engaging. The overall visual style is crisp and clear, optimized for a high-definition video conferencing interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpyXAyJcic8X-CSAdSU_ncC2pFlCX8FBAc-CSa_U7jkBcJgivSPqo1BpjfJ1AooZ--XR6dCewE0JoD_u33TYMrQmzBCBn4LVSTTgTHQ4b7s5iF1j6pcQouyLrNn5zzSPxu2Jq-Fuyr64MILpMcD0VSAgdycVatzGUjVVUTO91HQ7HQRp52qjVp3pZF4mXP6rPkFDFX_HgLtK7-CeLSwH-YeqN8qM1EWoHoxd3gDnUDr3sp-jUZVYANdlBMFmbk7F_9mzylyQCTxZ2V"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-black/40 backdrop-blur-md rounded text-white text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic_off">mic_off</span> Elena R.
+                            </div>
+</div>
+<!-- Current User (Self) -->
+<div class="relative bg-slate-800 rounded-xl overflow-hidden ring-2 ring-primary">
+<div class="w-full h-full bg-slate-700 flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="person">person</span>
+<span class="text-xs">Your Video (Off)</span>
+</div>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-primary/80 backdrop-blur-md rounded text-white text-[10px]">
+                                You
+                            </div>
+</div>
+</div>
+<!-- Video Controls Overlay -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-slate-950/80 backdrop-blur-xl px-6 py-3 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="videocam_off">videocam_off</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="screen_share">screen_share</span>
+</button>
+<div class="w-px h-6 bg-white/20"></div>
+<button class="w-12 h-10 rounded-2xl bg-error hover:bg-error/90 flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="call_end">call_end</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar -->
+<div class="space-y-8">
+<!-- Fito Guide Assistant (Floating Plane style) -->
+<div class="glass-assistant rounded-3xl p-6 relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-tertiary/20 blur-3xl rounded-full transition-all group-hover:scale-150"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-xl" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h4 class="font-display font-bold text-on-background">Fito Guide Tip</h4>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                        "Thinking about starting a co-op? Use these video sessions to screen interests! Most parents find that a quick 15-minute intro helps build trust faster than texting."
+                    </p>
+</div>
+<!-- Activity Stats -->
+<div class="bg-surface-container p-6 rounded-3xl border border-surface-container-highest">
+<h5 class="font-display font-bold text-on-background mb-4">Weekly Stats</h5>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm text-on-surface-variant">Active Meetups</span>
+<span class="font-bold text-secondary">24</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[65%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-on-surface-variant">Families Joined</span>
+<span class="font-bold text-secondary">112</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[88%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Verified Parent Badge Highlight -->
+<div class="flex items-center gap-4 bg-amber-50 p-4 rounded-2xl border border-amber-200/50">
+<div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-2xl" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<p class="font-display font-bold text-sm text-amber-900">Safety First</p>
+<p class="text-xs text-amber-700">Only verified parents can initiate or join these video rooms.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg fixed bottom-0 w-full z-50 border-t rounded-t-2xl border-t border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] md:hidden">
+<div class="flex justify-around items-center px-4 pt-2 pb-6">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 font-lexend text-[11px] font-medium hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Home
+            </a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 font-lexend text-[11px] font-medium hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                Discover
+            </a>
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1 font-lexend text-[11px] font-medium transition-all Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+                Groups
+            </a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 font-lexend text-[11px] font-medium hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Learning
+            </a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 font-lexend text-[11px] font-medium hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                Profile
+            </a>
+</div>
+</nav>
+<!-- Desktop Floating Action -->
+<div class="hidden md:block fixed bottom-8 right-8 z-50">
+<button class="bg-secondary text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform Active: scale-95 duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</div>
+</body></html>

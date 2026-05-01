@@ -1,0 +1,37 @@
+kind: "AppStack"
+apiVersion: "v1"
+runConfig:
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+env:
+  - variable: NEXT_PUBLIC_SITE_URL
+    value: "https://meetfito.com"
+  - variable: NEXT_PUBLIC_VIDEO_PROVIDER
+    value: "whereby"
+  - variable: NEXT_PUBLIC_MAP_PROVIDER
+    value: "openstreetmap"
+  - variable: NEXT_PUBLIC_OPENSTREETMAP_ENABLED
+    value: "true"
+  - variable: STRIPE_SECRET_KEY
+    secret: STRIPE_SECRET_KEY
+  - variable: STRIPE_WEBHOOK_SECRET
+    secret: STRIPE_WEBHOOK_SECRET
+  - variable: DIDIT_API_KEY
+    secret: DIDIT_API_KEY
+  - variable: DIDIT_WEBHOOK_SECRET
+    secret: DIDIT_WEBHOOK_SECRET
+  - variable: WHEREBY_API_KEY
+    secret: WHEREBY_API_KEY
+  - variable: OPENROUTER_API_KEY
+    secret: OPENROUTER_API_KEY
+  - variable: STRIPE_PRICE_PRO_PARENT
+    value: "price_1TSCJyCKN6yXs0gZJVzIFCvy"
+  - variable: STRIPE_PRICE_COOP_LEADER
+    value: "price_1TSCKXCKN6yXs0gZmQfqlRMX"
+  - variable: STRIPE_PRICE_KYC_5
+    value: "price_1TSCL5CKN6yXs0gZ8CaLvxZz"
+  - variable: STRIPE_PRICE_EVENT_BOOST
+    value: "price_1TSCLwCKN6yXs0gZFHhxfpIT"
+  - variable: STRIPE_PRICE_GROUP_BOOST
+    value: "price_1TSCMRCKN6yXs0gZrSMFRU20"

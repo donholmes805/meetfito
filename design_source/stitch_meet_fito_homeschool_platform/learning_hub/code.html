@@ -1,0 +1,333 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#386b01",
+                        "secondary-fixed-dim": "#9cd769",
+                        "surface": "#fff8f6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#643f00",
+                        "on-background": "#2c160e",
+                        "tertiary-fixed": "#cee5ff",
+                        "outline": "#857462",
+                        "on-secondary-fixed": "#0d2000",
+                        "on-secondary-fixed-variant": "#285000",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#b7f481",
+                        "surface-container-highest": "#ffdbd0",
+                        "secondary-container": "#b7f481",
+                        "on-secondary-container": "#3e7109",
+                        "tertiary-fixed-dim": "#96ccff",
+                        "primary-fixed": "#ffddb5",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "on-tertiary-container": "#004d79",
+                        "on-primary-container": "#674100",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#ffede8",
+                        "on-error": "#ffffff",
+                        "surface-container": "#ffe9e3",
+                        "background": "#fff8f6",
+                        "inverse-primary": "#ffb957",
+                        "inverse-surface": "#442a22",
+                        "tertiary-container": "#76bfff",
+                        "surface-variant": "#ffdbd0",
+                        "surface-dim": "#fbd1c4",
+                        "outline-variant": "#d7c3ae",
+                        "primary-fixed-dim": "#ffb957",
+                        "error": "#ba1a1a",
+                        "tertiary": "#00639a",
+                        "error-container": "#ffdad6",
+                        "primary": "#835400",
+                        "surface-tint": "#835400",
+                        "on-surface-variant": "#524434",
+                        "primary-container": "#f9a825",
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-high": "#ffe2da",
+                        "on-primary-fixed": "#2a1800",
+                        "surface-bright": "#fff8f6",
+                        "on-surface": "#2c160e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "mobile-margin": "24px",
+                        "base": "8px",
+                        "desktop-margin": "auto",
+                        "section-gap": "32px",
+                        "max-width": "1200px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "h1": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Lexend"],
+                        "badge-text": ["Lexend"],
+                        "h2": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-guide {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500" data-icon="diversity_3">diversity_3</span>
+<h1 class="text-xl font-extrabold text-amber-600 dark:text-amber-500 font-lexend tracking-tight">Meet Fito</h1>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-slate-400 font-lexend font-bold tracking-tight hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-2 rounded-lg" href="#">Home</a>
+<a class="text-stone-600 dark:text-slate-400 font-lexend font-bold tracking-tight hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-2 rounded-lg" href="#">Discover</a>
+<a class="text-amber-600 dark:text-amber-500 font-lexend font-bold tracking-tight px-3 py-2 rounded-lg" href="#">Learning</a>
+<a class="text-stone-600 dark:text-slate-400 font-lexend font-bold tracking-tight hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-2 rounded-lg" href="#">Groups</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-lexend font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                Ask Fito Guide
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-mobile-margin md:px-0 py-section-gap">
+<!-- Search & Header Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div>
+<h2 class="font-h1 text-h1 text-on-background mb-2">Learning Hub</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">Access curated educational resources, lesson plans, and activities designed for your homeschooling journey.</p>
+</div>
+<button class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-xl font-lexend font-bold shadow-sm hover:shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="upload">upload</span>
+<span>Upload Material</span>
+</button>
+</div>
+<div class="relative max-w-3xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-2xl border border-outline/15 bg-white shadow-sm focus:ring-2 focus:ring-tertiary focus:border-tertiary outline-none font-body-md transition-all" placeholder="Search worksheets, lesson plans, or guides..." type="text"/>
+</div>
+</section>
+<!-- Category Grid -->
+<section class="mb-section-gap">
+<h3 class="font-h2 text-h2 mb-6">Explore by Subject</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="functions">functions</span>
+</div>
+<span class="font-lexend font-bold text-sm">Math</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center text-red-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<span class="font-lexend font-bold text-sm">Reading</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-green-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="science">science</span>
+</div>
+<span class="font-lexend font-bold text-sm">Science</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="history_edu">history_edu</span>
+</div>
+<span class="font-lexend font-bold text-sm">History</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="sports_soccer">sports_soccer</span>
+</div>
+<span class="font-lexend font-bold text-sm">P.E.</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-secondary transition-all cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600 mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology">psychology</span>
+</div>
+<span class="font-lexend font-bold text-sm">Life Skills</span>
+</div>
+</div>
+</section>
+<!-- Material Cards Grid (Bento Style) -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-h2 text-h2">Featured Resources</h3>
+<a class="text-secondary font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: PDF Worksheet -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-100 hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-stone-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist workspace with an open notebook, colorful pens, and a wooden desk. Soft natural morning light illuminates the scene, creating a peaceful and focused educational atmosphere. The composition is professional and organized, featuring a high-key light mode aesthetic with warm wood tones and crisp white paper textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRZDgMIjYebvz_icmjiUwR2dBcwT2tRR82IfskLB0DWvQ4Ncau_Lr4_8TBUJtAb3UerZxOD6_-86DTgxXCrvXLKmIirT46dqudtVktQvWq1paZ1TAWjRl9ARUqOzEQWw-d4Zhwvm97cTHkEPMq2HUD1xO5h9BbIfglI6Bep9a5kfM-cEev2yzbGjLRgKK3WfkrBf1o-v37YoXuzEQ8UlYr-xT8cxyEA_yOH-o3QaQo7mtuBFATMGKMWId5MI-bEIArHWyIr8DD6oUa"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-red-500 text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="text-badge-text font-badge-text uppercase text-on-surface-variant">PDF Worksheet</span>
+</div>
+</div>
+<div class="p-card-padding">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-lexend font-bold text-lg leading-tight">Beginner Fractions: Visual Guide</h4>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Grades 2-4</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">A comprehensive visual guide to understanding parts of a whole through fun pie-chart illustrations.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a smiling woman with a warm, friendly expression, set against a soft, blurred natural background. She represents a verified parent educator within the community, exuding trust and approachability. The lighting is bright and airy, maintaining the professional-organic aesthetic of the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMqQes8H-R_rgqylTkmx6hISWsMvCVpXIsdwEQvn434gk3n3RSqDGMjz6OQ9273dxvHUuP__kx1XvgKk4ZoIoNz4NFU-J8pdH_PATBmKJOieyfBvddQ6Eu4YaHkwwUgnXaRDnUvMvN_3FJ4CA3x-8V90oKvne0djUtfZhhiR1JGsmvwUdFbAkCE1TQgrzAFhBeQ83ytwWGSuizR0RwCdMJgIbG15X0iCCjm4zeSSNGI0iVwo0b0Gr-ZroLtqfw5qy0C0eP8yVgav1O"/>
+</div>
+<span class="text-xs font-medium text-stone-500">Sarah M.</span>
+</div>
+<button class="text-secondary font-bold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span> Download
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Lesson Plan -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-100 hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-stone-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A bright science laboratory setting with clear beakers and vibrant blue and orange liquids. The scene is clean and educational, suggesting a safe environment for discovery. Soft, diffused lighting highlights the crystalline textures of the glassware against a minimalist white background, embodying a modern-tactile educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRmaniM5wUd8u85ysNBZxQe5y72uLBz7TleYRzBUXFQIbYSCvKuPmzJrhNDTRqbV5-RsAY469INNVz6f8QN7gzdwJWbzLOaZS3_IdWZSkixWex2al81hWeJdGV20mmf7SM8-QQrI39eDZYSxsEMq2_A4jbEzSIwssZzsrLQ9SYAo8Z1wAkQAZGu_-F9jwVTQMi5RfmR8cNjWtEcLPBGnNHiHCEdFJ4afzQ4i6kPp0dT-U-N51DHjbQiO8vDulebjEDe9_-5x4ROXHg"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-500 text-sm" data-icon="assignment">assignment</span>
+<span class="text-badge-text font-badge-text uppercase text-on-surface-variant">Lesson Plan</span>
+</div>
+</div>
+<div class="p-card-padding">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-lexend font-bold text-lg leading-tight">Photosynthesis Deep Dive</h4>
+<span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Grades 5-7</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">45-minute lesson covering light absorption, carbon cycles, and a hands-on plant experiment.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a man in a casual business setting, conveying experience and reliability. The lighting is warm and natural, creating a welcoming and trustworthy persona suitable for a senior community administrator. The style is crisp and clear, aligned with a premium digital community interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo0HlFQyuHSGErpGAd-ek2701JLJ3-B54LYdY1qLy2RGSfdTmD1U1_n4xNLmafkD_gUQk8Kk1fhr80v2sDUmZnEqAdgXzw5JDglsimEqHZMn-auasy3m8vXW8b2pKjNgr1p6w7L7PSmcADG8TYyrG0uX79UtbLN-_LMYxko23KmxK8_xFBwQwYsdpbgquBmm1SSQm0aWq7YFQSkUyP8H_ipV6V0RMTH1-ks-p00jbAyPzAY4BUG9QoTXNuEHI1ep7CgD9ILugPVo_f"/>
+</div>
+<span class="text-xs font-medium text-stone-500">David K.</span>
+</div>
+<button class="text-secondary font-bold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span> Preview
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3: P.E. Guide -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-100 hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-stone-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Children running and playing on a lush green sunlit field, with dynamic movement captured in a soft, bright photographic style. The atmosphere is joyful and energetic, emphasizing physical health and outdoor community activity. The colors are vibrant and organic, with deep greens and golden sunlight creating a sense of growth and vitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuKB00hhj6MbzFZ8HsTEU3abFEWK4kriR2KmWQp2g3-1A5blHUlDdp-OL11oD4K-36Kkxok081ciizwy985vLIzecXN1EToTlw-Tu4YV5EqcRlYzMbLlEnV90ojOyu2bP0-fwn_f8dxEDvvKyihNHMQQ-NeTT9vSrYEli87mSQpqJ8OMa5Lbwki32i79QynL3G1c09ZZzORCc4vIfyZiNO9bzNtJBJb7BT5WsbBxZuk9rXZNerDN5FSkKTgxy5R2gQ2kdfs1VZsYW9"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm" data-icon="fitness_center">fitness_center</span>
+<span class="text-badge-text font-badge-text uppercase text-on-surface-variant">Activity Guide</span>
+</div>
+</div>
+<div class="p-card-padding">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-lexend font-bold text-lg leading-tight">Backyard Obstacle Course</h4>
+<span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full">All Ages</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">Creative ways to use household items for a full-body workout and coordination training outdoors.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A friendly, close-up portrait of a woman with a genuine smile, radiating kindness and competence. The background is a soft-focus garden, maintaining the organic neighborhood feel of the brand. High-quality lighting highlights the skin textures and brightness, consistent with a clean, light-mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cO7H1BNUTt1rQH__NkyqDpif8WEBLDQdnrPb3Pt2DxppPZYAYiv7sc940v_zeStREJ6x5zZeCPnH-0pYIbx23_UFUUFgRB2lEnVTK7O9aZlMvrcfmtCcx81UjvutWOrdo2lyL7GTOoBtROlRj99MXtDgKaVFELDGlnNookXLIzrhJoDb0yTTKLGGp37bMG0yJFylGK6NYWrY9ComufBabrBIvd8T0tsyKSsyB0k10kgpk57I-aTuo5Gm7JAzLiaJ84qGFHhLua_I"/>
+</div>
+<span class="text-xs font-medium text-stone-500">Elena R.</span>
+</div>
+<button class="text-secondary font-bold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span> Share
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State / Placeholder for Upload -->
+<section class="mt-section-gap py-12 px-6 rounded-2xl border-2 border-dashed border-stone-200 flex flex-col items-center justify-center text-center bg-stone-50/50">
+<div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-outline text-3xl" data-icon="add_circle">add_circle</span>
+</div>
+<h4 class="font-h2 text-h2 mb-2">Have great materials to share?</h4>
+<p class="text-on-surface-variant max-w-sm mb-6">Contribute to the community learning hub. Your verified resources help parents across the network grow.</p>
+<button class="bg-white border border-stone-300 text-on-surface px-8 py-3 rounded-xl font-lexend font-bold hover:bg-stone-50 transition-colors">
+                Start Uploading
+            </button>
+</section>
+</main>
+<!-- Fito Guide Floating Button -->
+<div class="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-[60]">
+<button class="glass-guide p-4 rounded-full shadow-lg flex items-center gap-3 border border-purple-200 hover:scale-105 transition-transform">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center shadow-inner relative">
+<span class="material-symbols-outlined text-white" data-icon="auto_awesome">auto_awesome</span>
+<span class="absolute inset-0 rounded-full animate-pulse bg-purple-400 opacity-20"></span>
+</div>
+<span class="font-lexend font-bold text-sm pr-2 text-purple-900">Ask Fito</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] z-50 rounded-t-2xl md:hidden">
+<div class="flex justify-around items-center px-4 pt-2 pb-6">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

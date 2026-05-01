@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meet Fito Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#386b01",
+                      "secondary-fixed-dim": "#9cd769",
+                      "surface": "#fff8f6",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#643f00",
+                      "on-background": "#2c160e",
+                      "tertiary-fixed": "#cee5ff",
+                      "outline": "#857462",
+                      "on-secondary-fixed": "#0d2000",
+                      "on-secondary-fixed-variant": "#285000",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#b7f481",
+                      "surface-container-highest": "#ffdbd0",
+                      "secondary-container": "#b7f481",
+                      "on-secondary-container": "#3e7109",
+                      "tertiary-fixed-dim": "#96ccff",
+                      "primary-fixed": "#ffddb5",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#001d32",
+                      "on-tertiary-fixed-variant": "#004a75",
+                      "on-tertiary-container": "#004d79",
+                      "on-primary-container": "#674100",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#ffede8",
+                      "on-error": "#ffffff",
+                      "surface-container": "#ffe9e3",
+                      "background": "#fff8f6",
+                      "inverse-primary": "#ffb957",
+                      "inverse-surface": "#442a22",
+                      "tertiary-container": "#76bfff",
+                      "surface-variant": "#ffdbd0",
+                      "surface-dim": "#fbd1c4",
+                      "outline-variant": "#d7c3ae",
+                      "primary-fixed-dim": "#ffb957",
+                      "error": "#ba1a1a",
+                      "tertiary": "#00639a",
+                      "error-container": "#ffdad6",
+                      "primary": "#835400",
+                      "surface-tint": "#835400",
+                      "on-surface-variant": "#524434",
+                      "primary-container": "#f9a825",
+                      "surface-container-low": "#fff1ed",
+                      "surface-container-high": "#ffe2da",
+                      "on-primary-fixed": "#2a1800",
+                      "surface-bright": "#fff8f6",
+                      "on-surface": "#2c160e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "mobile-margin": "24px",
+                      "base": "8px",
+                      "desktop-margin": "auto",
+                      "section-gap": "32px",
+                      "max-width": "1200px",
+                      "card-padding": "20px"
+              },
+              "fontFamily": {
+                      "display": ["Lexend"],
+                      "body-md": ["Lexend"],
+                      "h1": ["Lexend"],
+                      "body-lg": ["Lexend"],
+                      "label-caps": ["Lexend"],
+                      "badge-text": ["Lexend"],
+                      "h2": ["Lexend"]
+              },
+              "fontSize": {
+                      "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                      "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500 text-3xl" data-icon="diversity_3">diversity_3</span>
+<span class="text-xl font-extrabold text-amber-600 dark:text-amber-500 font-lexend tracking-tight">Meet Fito</span>
+<span class="ml-4 px-2 py-0.5 bg-amber-100 text-amber-800 text-badge-text font-badge-text rounded-lg">ADMIN</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-50 text-amber-600 font-lexend font-bold text-sm hover:bg-amber-100 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                    Ask Fito Guide
+                </button>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a mature, friendly male administrator with a warm smile. He is set against a soft-focus office background that feels bright and airy, reflecting a high-key light mode aesthetic. The lighting is clean and natural, emphasizing a mood of reliability and community leadership, consistent with a premium educational platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiUGHKBeT1vhhADsIPpPZiOfNcpT0U8ihEcmJ6kDITTnLDeruXMaKm_tZIfavYU2OPXpojLXwQxu3qA0q8LMnH7tlSs__lNlKMG4HJ2MekBfPH5qpQHKb_BpQ-lFh3_026iUmaZoGS1KshVyVch84AWJ_HklKkNrGXLKRNiUz6RuP9FtdSdm0QaDE8FpU4vJtfPaAg5FHdLouztKP0VB0JwmVqmeEqLFy2ofxhmK9n7jXv6EBAFeUzyW46kqFL2IjAfiZ_YRJ8P-eo"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-6 py-section-gap pb-24">
+<!-- Welcome & Analytics Overview -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
+<div>
+<h1 class="font-h1 text-h1 text-on-background">System Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Monitoring your homeschool community growth.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-low p-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-lexend font-bold flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                        Export Report
+                    </button>
+</div>
+</div>
+<!-- Analytics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-1 bg-white p-card-padding rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="groups">groups</span>
+</div>
+<span class="text-secondary text-badge-text font-badge-text">+12%</span>
+</div>
+<p class="text-label-caps font-label-caps text-outline uppercase tracking-wider">Total Users</p>
+<p class="text-h2 font-h2 text-on-background">1,284</p>
+</div>
+<div class="md:col-span-1 bg-white p-card-padding rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-tertiary-container rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="event_available">event_available</span>
+</div>
+<span class="text-tertiary text-badge-text font-badge-text">+5%</span>
+</div>
+<p class="text-label-caps font-label-caps text-outline uppercase tracking-wider">Active Meetups</p>
+<p class="text-h2 font-h2 text-on-background">42</p>
+</div>
+<div class="md:col-span-2 bg-gradient-to-br from-tertiary-container/30 to-surface p-card-padding rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-tertiary-container/20 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-label-caps font-label-caps text-on-tertiary-fixed-variant uppercase tracking-wider">Learning Engagement</p>
+<p class="text-h2 font-h2 text-on-tertiary-fixed-variant mb-4">High Efficiency</p>
+<div class="flex gap-2">
+<div class="h-16 w-full bg-white/50 rounded-lg flex items-end p-2 gap-1">
+<div class="w-full bg-tertiary rounded-sm h-[30%]"></div>
+<div class="w-full bg-tertiary rounded-sm h-[45%]"></div>
+<div class="w-full bg-tertiary rounded-sm h-[80%]"></div>
+<div class="w-full bg-tertiary rounded-sm h-[60%]"></div>
+<div class="w-full bg-tertiary rounded-sm h-[95%]"></div>
+<div class="w-full bg-tertiary rounded-sm h-[70%]"></div>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-tertiary/10 pointer-events-none" data-icon="monitoring">monitoring</span>
+</div>
+</div>
+</section>
+<!-- Management Sections -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Verification & Actions -->
+<div class="lg:col-span-1 space-y-8">
+<!-- Verification Queue -->
+<div class="bg-white rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-surface-container">
+<div class="p-card-padding border-b border-surface-container flex justify-between items-center">
+<h2 class="font-h2 text-body-lg text-on-background">Verification Queue</h2>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded-full text-badge-text font-badge-text">4 Pending</span>
+</div>
+<div class="divide-y divide-surface-container">
+<div class="p-card-padding hover:bg-surface-container-low transition-colors flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-stone-200">
+<img alt="Parent Applicant" class="w-full h-full object-cover" data-alt="A portrait of a young mother with a gentle expression, wearing a warm knitted sweater. The image is captured in a sun-drenched outdoor garden with soft bokeh, creating a peaceful and trustworthy vibe. The lighting is golden and soft, emphasizing the brand's focus on community safety and approachable parenting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4hKijtl4_Ub8kBMMg7hs4cnbqYLMBz6LLrXsGqmJ_gbCnt7_Vd8-8t8x2UhXDjX4nOWS8yqgKs8xItmwIS0fEKI8m48cqIKUZYBp54WdH1rXwOGUm4lNEegTuBRal-AxK76iKSwgD3yyatsW_d7M7WtyVxyVUtGsFePt56QgXQ4teuwOVKkbS3zJaQN1J-vGIcdyUh3HRXFZykcOMBD_i8U4K1_GPbYOykaUmv-qib114IcWMA_7Nz965K_RzC-NrMxoVxyRsu9Z"/>
+</div>
+<div class="flex-grow min-w-0">
+<p class="font-lexend font-bold text-on-background truncate">Sarah Jenkins</p>
+<p class="text-badge-text text-outline truncate">Verified via LinkedIn</p>
+</div>
+<div class="flex gap-1">
+<button class="p-2 text-secondary hover:bg-secondary-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+</button>
+</div>
+</div>
+<div class="p-card-padding hover:bg-surface-container-low transition-colors flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-stone-200">
+<img alt="Parent Applicant" class="w-full h-full object-cover" data-alt="A professional man in his late 30s with short hair and a pleasant, calm demeanor. He is wearing a casual polo shirt, photographed in a bright, modern interior setting with a clean, minimalist background. The soft lighting conveys safety and reliability, fitting the modern-tactile aesthetic of the parent verification queue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA73BxPsjWUZRvGXiGBKdpSmvAjSgMeJS3QQl0QbEhYL8A-KpYNoHb_AvzCivbFF7vO-rwwhTx8Ch6ARA8No4D-CZ5UHhHOZpMazYKWFuCArk3IbvoZOTM3em6sfhUxz6y3QyqOmDvXqb8lk6Iu0Ic8G1PdN_a3_Dl_MmwXxcjtRDFSXRkcdi5GM9tjZwoHN55dZejO0MkJhyZQfjIIUxAUBNASumrenlu95GZFPS5Dbmy0VWyQ1jtQ4G__w-ITuEAWc_YYIvJS3jsb"/>
+</div>
+<div class="flex-grow min-w-0">
+<p class="font-lexend font-bold text-on-background truncate">Marcus Thorne</p>
+<p class="text-badge-text text-outline truncate">ID Document Uploaded</p>
+</div>
+<div class="flex gap-1">
+<button class="p-2 text-secondary hover:bg-secondary-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-container">
+<button class="text-primary font-lexend font-bold text-sm hover:underline">View All Queue</button>
+</div>
+</div>
+<!-- Rapid Actions -->
+<div class="bg-surface-container-high p-card-padding rounded-xl space-y-4">
+<p class="text-label-caps font-label-caps text-outline uppercase tracking-wider">Quick Management</p>
+<button class="w-full bg-white p-4 rounded-xl flex items-center justify-between border border-primary-container/20 hover:border-primary-container transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="upload_file">upload_file</span>
+<span class="font-lexend font-medium text-on-background">Upload Course Material</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full bg-white p-4 rounded-xl flex items-center justify-between border border-primary-container/20 hover:border-primary-container transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="add_moderator">add_moderator</span>
+<span class="font-lexend font-medium text-on-background">Appoint Co-op Admin</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full bg-white p-4 rounded-xl flex items-center justify-between border border-primary-container/20 hover:border-primary-container transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error" data-icon="report_problem">report_problem</span>
+<span class="font-lexend font-medium text-on-background">Review Flagged Content</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Main Content Area -->
+<div class="lg:col-span-2 space-y-8">
+<!-- User & Group Management Tabs -->
+<div class="bg-white rounded-2xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container">
+<div class="px-6 pt-6 flex border-b border-surface-container gap-8">
+<button class="pb-4 border-b-2 border-primary text-primary font-lexend font-bold text-sm">Users</button>
+<button class="pb-4 border-b-2 border-transparent text-outline font-lexend font-medium text-sm hover:text-on-background transition-colors">Groups &amp; Co-ops</button>
+<button class="pb-4 border-b-2 border-transparent text-outline font-lexend font-medium text-sm hover:text-on-background transition-colors">Events</button>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row justify-between mb-6 gap-4">
+<div class="relative flex-grow max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-primary focus:border-primary outline-none" placeholder="Search members by name, email or badge..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-low rounded-xl text-sm font-lexend font-medium border border-outline-variant">Filter</button>
+<button class="px-4 py-2 bg-surface-container-low rounded-xl text-sm font-lexend font-medium border border-outline-variant">Sort</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-label-caps font-label-caps text-outline uppercase tracking-wider">
+<th class="pb-4">Member</th>
+<th class="pb-4">Status</th>
+<th class="pb-4">Groups</th>
+<th class="pb-4">Activity</th>
+<th class="pb-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container font-bold text-xs">EK</div>
+<div>
+<p class="font-lexend font-bold text-sm text-on-background">Emily Knight</p>
+<p class="text-[12px] text-outline">emily.k@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-1 px-2 py-0.5 bg-secondary-container/30 text-secondary text-badge-text font-badge-text rounded-full w-fit">
+<span class="material-symbols-outlined text-[12px] font-bold" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                                Verified
+                                            </div>
+</td>
+<td class="py-4">
+<span class="text-sm font-lexend text-on-background">3 Co-ops</span>
+</td>
+<td class="py-4">
+<p class="text-sm text-outline">Yesterday</p>
+</td>
+<td class="py-4 text-right">
+<button class="p-1 hover:bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container font-bold text-xs">DW</div>
+<div>
+<p class="font-lexend font-bold text-sm text-on-background">David Walsh</p>
+<p class="text-[12px] text-outline">d.walsh@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-1 px-2 py-0.5 bg-surface-container text-outline text-badge-text font-badge-text rounded-full w-fit">
+                                                Pending
+                                            </div>
+</td>
+<td class="py-4">
+<span class="text-sm font-lexend text-on-background">0 Co-ops</span>
+</td>
+<td class="py-4">
+<p class="text-sm text-outline">4 days ago</p>
+</td>
+<td class="py-4 text-right">
+<button class="p-1 hover:bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container font-bold text-xs">AJ</div>
+<div>
+<p class="font-lexend font-bold text-sm text-on-background">Anna Johnson</p>
+<p class="text-[12px] text-outline">anna.j@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-1 px-2 py-0.5 bg-secondary-container/30 text-secondary text-badge-text font-badge-text rounded-full w-fit">
+<span class="material-symbols-outlined text-[12px] font-bold" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                                Verified
+                                            </div>
+</td>
+<td class="py-4">
+<span class="text-sm font-lexend text-on-background">1 Co-op</span>
+</td>
+<td class="py-4">
+<p class="text-sm text-secondary font-bold">Online Now</p>
+</td>
+<td class="py-4 text-right">
+<button class="p-1 hover:bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Learning Material Management (Card Grid) -->
+<div>
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-h2 text-h2 text-on-background">New Content</h2>
+<button class="text-primary font-lexend font-bold text-sm flex items-center gap-1">
+                            Manage All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container overflow-hidden flex flex-col">
+<div class="h-32 w-full overflow-hidden bg-stone-200">
+<img alt="Curriculum Preview" class="w-full h-full object-cover" data-alt="A stack of beautifully illustrated children's storybooks on a clean wooden shelf, illuminated by soft natural light. The palette is dominated by warm earth tones and soft whites, suggesting an organic, high-end educational resource. The mood is curious and academic but approachable for young homeschoolers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV4JWbBIy4-MWzSLHYz2LO0ijHhwaS1mPBLzavI3Sr0LyvSYDOHVtq7SJffjxQ8tO5B7azkO5W4F4b9JwW4NCcU57Frii9E4LWoovMZJXiY8xWp3mRgZE26kKY_unAXlrLQaFvSYK4HIAq_6DYLrFPIunSAEshzw3W13NgteOowntVDIAnwAZd6FAg-CUpbYyjIYQzgveIQxUKWCbl-pLsjZp8AWVU-OGE8Wum6KZwgBdXGyzwCsaDBhjDhTWt67ueTkh2TGszPFQ9"/>
+</div>
+<div class="p-4 flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-lexend font-bold text-on-background">Nature Science Vol. 1</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-badge-text font-badge-text uppercase">Published</span>
+</div>
+<p class="text-sm text-outline line-clamp-2">Complete set of botanical studies for primary age homeschoolers.</p>
+</div>
+<div class="p-4 pt-0 flex gap-2">
+<button class="flex-grow py-2 border border-outline-variant rounded-lg text-sm font-lexend font-bold hover:bg-surface-container-low transition-colors">Edit</button>
+<button class="p-2 border border-outline-variant rounded-lg text-outline hover:bg-error-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-surface-container overflow-hidden flex flex-col">
+<div class="h-32 w-full overflow-hidden bg-stone-200">
+<img alt="Curriculum Preview" class="w-full h-full object-cover" data-alt="A macro shot of vibrant art supplies, including high-quality paints and brushes in an organized classroom setting. The lighting is bright and cheerful, highlighting the textures of the materials. This image reflects the 'Creative Expression' module of the Fito learning platform with its professional yet playful aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp1tIsPJb81-uJ5X698nGXDa-d9wvC1HGyst0zbJMUMImycFfMjlGdIZZQ-3HYKYRZZC1vq1hniGmaaJUfj0EXV56U1nF3RMth7-E8JJboxqJJ1Jv8rBb1l295aWJ6RGuNn7v_I3xdojYroZ7YnywFj78tEoUmTHVBpzGMJ6KXSPqGl48mMq7oVHyIPHoqPejT9j0V9hEaGsq8emsyx4AQSvCpIq_33QpJ9YtaCfi8DaspFsq9913AdH0mNc-IuFzVEODy2wNVSM0N"/>
+</div>
+<div class="p-4 flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-lexend font-bold text-on-background">Creative Expression</h3>
+<span class="bg-surface-container text-outline px-2 py-0.5 rounded text-badge-text font-badge-text uppercase">Draft</span>
+</div>
+<p class="text-sm text-outline line-clamp-2">Interactive art workshop series for middle-school groups.</p>
+</div>
+<div class="p-4 pt-0 flex gap-2">
+<button class="flex-grow py-2 border border-outline-variant rounded-lg text-sm font-lexend font-bold hover:bg-surface-container-low transition-colors">Resume</button>
+<button class="p-2 border border-outline-variant rounded-lg text-outline hover:bg-error-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on desktop, shown on mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] flex justify-around items-center px-4 pt-2 pb-6 z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Fito Guide FAB -->
+<button class="fixed right-6 bottom-24 md:bottom-12 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group z-40">
+<div class="absolute inset-0 rounded-full bg-indigo-400 animate-ping opacity-20 pointer-events-none"></div>
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" data-icon="psychology">psychology</span>
+</button>
+</body></html>

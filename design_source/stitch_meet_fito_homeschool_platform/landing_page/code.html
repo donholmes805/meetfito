@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meet Fito - Homeschool Meetups Made Simple</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#386b01",
+                        "secondary-fixed-dim": "#9cd769",
+                        "surface": "#fff8f6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#643f00",
+                        "on-background": "#2c160e",
+                        "tertiary-fixed": "#cee5ff",
+                        "outline": "#857462",
+                        "on-secondary-fixed": "#0d2000",
+                        "on-secondary-fixed-variant": "#285000",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#b7f481",
+                        "surface-container-highest": "#ffdbd0",
+                        "secondary-container": "#b7f481",
+                        "on-secondary-container": "#3e7109",
+                        "tertiary-fixed-dim": "#96ccff",
+                        "primary-fixed": "#ffddb5",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "on-tertiary-container": "#004d79",
+                        "on-primary-container": "#674100",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#ffede8",
+                        "on-error": "#ffffff",
+                        "surface-container": "#ffe9e3",
+                        "background": "#fff8f6",
+                        "inverse-primary": "#ffb957",
+                        "inverse-surface": "#442a22",
+                        "tertiary-container": "#76bfff",
+                        "surface-variant": "#ffdbd0",
+                        "surface-dim": "#fbd1c4",
+                        "outline-variant": "#d7c3ae",
+                        "primary-fixed-dim": "#ffb957",
+                        "error": "#ba1a1a",
+                        "tertiary": "#00639a",
+                        "error-container": "#ffdad6",
+                        "primary": "#835400",
+                        "surface-tint": "#835400",
+                        "on-surface-variant": "#524434",
+                        "primary-container": "#f9a825",
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-high": "#ffe2da",
+                        "on-primary-fixed": "#2a1800",
+                        "surface-bright": "#fff8f6",
+                        "on-surface": "#2c160e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "mobile-margin": "24px",
+                        "base": "8px",
+                        "desktop-margin": "auto",
+                        "section-gap": "32px",
+                        "max-width": "1200px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "h1": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Lexend"],
+                        "badge-text": ["Lexend"],
+                        "h2": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fito-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+        }
+        .glass-guide {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md docked full-width top-0 sticky border-b border-stone-200 dark:border-slate-800 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500" data-icon="diversity_3">diversity_3</span>
+<span class="text-xl font-extrabold text-amber-600 dark:text-amber-500 font-lexend tracking-tight">Meet Fito</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-amber-600 dark:text-amber-500 font-bold font-lexend hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-stone-600 dark:text-slate-400 font-lexend hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-1 rounded-lg" href="#">Discover</a>
+<a class="text-stone-600 dark:text-slate-400 font-lexend hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors px-3 py-1 rounded-lg" href="#">Groups</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-stone-600 dark:text-slate-400 font-lexend font-bold px-4 py-2">Ask Fito Guide</button>
+<button class="bg-secondary text-on-primary px-5 py-2.5 rounded-full font-lexend font-bold text-sm shadow-md active:scale-95 duration-150 transition-all">Sign In</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-mobile-margin md:px-0">
+<!-- Hero Section -->
+<section class="py-12 md:py-24 flex flex-col items-center text-center">
+<div class="mb-6 inline-flex items-center gap-2 bg-surface-container px-4 py-1.5 rounded-full border border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified_user">verified_user</span>
+<span class="text-badge-text font-badge-text text-primary uppercase tracking-wider">Trusted by 5,000+ Homeschool Families</span>
+</div>
+<h1 class="font-display text-display text-on-background mb-6 max-w-3xl">
+                Homeschool Meetups Made Simple
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                Find families nearby, create study groups, organize P.E. days, and build safe homeschool co-ops in a community built specifically for parents.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-secondary text-on-primary px-10 py-4 rounded-xl font-display font-bold text-lg shadow-[0_4px_14px_0_rgba(56,107,1,0.39)] hover:shadow-[0_6px_20px_rgba(56,107,1,0.23)] active:scale-95 transition-all">
+                    Find Meetups
+                </button>
+<button class="bg-surface-container-low text-secondary border border-secondary/20 px-10 py-4 rounded-xl font-display font-bold text-lg hover:bg-surface-container transition-all active:scale-95">
+                    Create a Group
+                </button>
+</div>
+<!-- Hero Image / Visual Representation -->
+<div class="mt-16 w-full relative">
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[80%] bg-secondary/5 rounded-[100px] blur-3xl"></div>
+<img class="w-full aspect-[21/9] object-cover rounded-[32px] shadow-2xl border-4 border-white" data-alt="A warm and inviting outdoor scene showing a diverse group of happy homeschool families and children gathered in a sunny local park. The soft morning light illuminates the group as they engage in a cooperative learning activity with books and natural materials on wooden tables. The overall atmosphere is safe, professional, and community-focused, reflecting a modern light-mode aesthetic with soft cream and gentle green tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuVFybB7_mBSiI1mcBJ0o4NdR8gKDAj-XJVeHpLq7jr-DiLVz4sOo1zMVvWFEiU3KDQVK_3EV0g3mVt6LUm1p49-LXH9hh1C_kYBvijNSY_vxKinV-ex_eazLreICOQ3NGX3FUMq1GLdPVKWLS8Tqd5jALprC--E1vbnovNgGvMEoD7heRIJbHRk5CgB9EBDZL-qL9iAUrgipTJUAIMLSt5LLXIMrq4QdfGlJZEzQJocODTbm6OGDX5DX63CXrEnKJo2AyZfC5wA1R"/>
+</div>
+</section>
+<!-- Bento Features Grid -->
+<section class="py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div class="max-w-xl">
+<h2 class="font-h2 text-h2 text-on-background mb-2">Built for Your Lifestyle</h2>
+<p class="text-on-surface-variant font-body-md">Everything you need to organize your homeschooling social calendar in one beautiful space.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Card: Discovery -->
+<div class="md:col-span-8 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100 flex flex-col md:flex-row gap-8 overflow-hidden group">
+<div class="flex-1 flex flex-col justify-center">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="location_on">location_on</span>
+</div>
+<h3 class="font-h2 text-h2 mb-3">Local Family Discovery</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Find families in your immediate neighborhood with children of similar ages and interests.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-secondary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Verified Local Parents</span>
+</li>
+<li class="flex items-center gap-2 text-secondary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Age-Match Filtering</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 relative -mr-card-padding -mb-card-padding">
+<img class="w-full h-full object-cover rounded-tl-[16px] group-hover:scale-105 transition-transform duration-500" data-alt="A clean and modern digital map interface displayed on a tablet, showing stylized pins representing local family meetups in a leafy suburban neighborhood. The design uses soft earth tones and a secondary green palette, creating an organized and approachable feeling. The background is a bright, minimalist workspace with a small potted plant and natural sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9P5YMQzDlgCFZprlln7CLDduotW4tWhDnZ7fi4hb3cPL0-Rvk3XRXO8qvF7vGIGqKZha1Er4Qc3MVRmWZKwMxSOUENTaVsKuvZ8TXfKpKZXRb58R1TkJU0yZZj-wOdHr71AsJoFM3Cxamu9DFYVA5BkQkg4xwUO2OVmcuMvC5gTF580KDxBcTjyr_xPHUxYXF0hnC1F0eT9kaOOkSVzKz4srPwiLgh97tvjnVk-2Tu83l84dKQBLk32ImTC1n7SP0KyNR0y_rYuIY"/>
+</div>
+</div>
+<!-- Small Card: Study Meetups -->
+<div class="md:col-span-4 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100 flex flex-col">
+<div class="w-12 h-12 bg-tertiary-container/30 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Study Meetups</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Coordinate library days and focus sessions for various subjects and age groups.</p>
+<div class="mt-auto pt-4 border-t border-stone-50">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-amber-100 flex items-center justify-center text-[10px] font-bold">JD</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-green-100 flex items-center justify-center text-[10px] font-bold">AL</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-[10px] font-bold">SM</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-stone-100 flex items-center justify-center text-[10px] font-bold text-stone-500">+12</div>
+</div>
+</div>
+</div>
+<!-- Small Card: P.E. & Park Days -->
+<div class="md:col-span-4 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100">
+<div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="park">park</span>
+</div>
+<h3 class="text-xl font-bold mb-3">P.E. &amp; Park Days</h3>
+<p class="text-on-surface-variant font-body-md">Organize outdoor activities, group sports, and social park dates for physical development.</p>
+</div>
+<!-- Large Card: Co-Ops -->
+<div class="md:col-span-8 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100 flex flex-col md:flex-row-reverse gap-8 overflow-hidden group">
+<div class="flex-1 flex flex-col justify-center">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<h3 class="font-h2 text-h2 mb-3">Homeschool Co-Ops</h3>
+<p class="text-on-surface-variant font-body-md mb-4">Build long-term learning cooperatives where parents share teaching responsibilities.</p>
+<div class="flex items-center gap-4 text-sm font-semibold text-secondary">
+<span>Manage Schedules</span>
+<span>•</span>
+<span>Track Attendance</span>
+</div>
+</div>
+<div class="flex-1 relative -ml-card-padding -mb-card-padding">
+<img class="w-full h-full object-cover rounded-tr-[16px] group-hover:scale-105 transition-transform duration-500" data-alt="A professional and brightly lit classroom setup within a home environment. A diverse group of children is working together on a collaborative science project involving wooden blocks and diagrams. The aesthetic is clean, modern, and educational, featuring soft natural lighting and a palette of warm wood, whites, and gentle greens to convey a sense of professional homeschooling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsJrH_XPLRh_0XdHAPb7bXt1RRqjqlJw6b9T5k06ZJ1cwY3PqxUSZcCY66AwNCnO-o1xpVOnLPlOb50ghzcKVJ_BUdUWroEP_WJrFAvF3fEKnVs4R13i5Se7_bh9Dr92JyOjW0KMh3qdQG2e06bcMx7IMamVFYK63rS2fLwU2iLXTk8tpxr2Y1dyXgdLkFthhN_vz-UtDa9r88dExUjAXSOj_RraxYKNKX7R8OFpOLcGL1weOldA4s52AxNxtS94AAu5-S2ESMuKV-"/>
+</div>
+</div>
+<!-- Feature: Learning Materials -->
+<div class="md:col-span-6 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100 flex items-center gap-6">
+<div class="flex-shrink-0 w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600 text-3xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">Learning Materials</h3>
+<p class="text-on-surface-variant text-sm">Share resources, curriculum reviews, and local book swaps within your groups.</p>
+</div>
+</div>
+<!-- Feature: Video Meetups -->
+<div class="md:col-span-6 bg-white p-card-padding rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] border border-stone-100 flex items-center gap-6">
+<div class="flex-shrink-0 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-3xl" data-icon="video_call">video_call</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">Parent Video Meetups</h3>
+<p class="text-on-surface-variant text-sm">Join nightly check-ins and planning sessions from the comfort of your home.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-section-gap mb-24">
+<div class="bg-surface-container-low rounded-[32px] p-8 md:p-16 relative overflow-hidden">
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 rounded-full mb-6">
+<span class="material-symbols-outlined text-amber-700 text-sm" data-icon="shield" data-weight="fill">shield</span>
+<span class="text-badge-text font-badge-text text-amber-800">SAFETY FIRST</span>
+</div>
+<h2 class="font-h1 text-h1 mb-6">Safe Groups for Peace of Mind</h2>
+<p class="text-on-surface-variant font-body-md mb-8 leading-relaxed">
+                            We understand that safety is your top priority. Meet Fito is built with a unique multi-step verification process designed specifically for the homeschool community. Every member of our platform is a verified parent, ensuring that your meetups remain safe and focused on growth.
+                        </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-white flex-shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="fingerprint">fingerprint</span>
+</div>
+<div>
+<h4 class="font-bold text-on-background">Parent ID Verification</h4>
+<p class="text-sm text-on-surface-variant">Secure identity checks to confirm all users are genuine parents within the community.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-white flex-shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="gated_privacy_indicator">privacy_screen</span>
+</div>
+<div>
+<h4 class="font-bold text-on-background">Private Group Chat</h4>
+<p class="text-sm text-on-surface-variant">Encrypted messaging for coordinating logistics and sharing sensitive location details.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-white rounded-2xl p-6 shadow-xl border border-stone-100 relative">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="A portrait of a friendly-looking mother in her late 30s with a warm smile, set against a soft-focus background of a clean, sunlit home office. She is dressed in a professional yet approachable mustard yellow sweater. The lighting is high-key and soft, emphasizing a trustworthy and welcoming personality consistent with a parent verification profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA26Nhy-uQyBSDR58U3eGFdTLZ7H1bJ-5bC070Tip8vU0HjFWzwdYM5mAX-Dr1IQp6DskVkLSY13sYUPdLYPaPgtpt1kIxJqMVQESe5C6Q-LLrnHTmn6FLXMPmMEcUx42kiZJfA1ssg1vu_o7DA0_1PfA_0H5F-2kI9AQRe-gtUcs-EKjSOIa1wNaYhW1c-TqdqkQafO_-7OEDa_2qyBn02QxQi0xDlMLt4DOW5lB3OeJjZRTN9_FvctH-gtf_WhixTIDuPEUBZ32sd"/>
+<div>
+<div class="flex items-center gap-1.5">
+<h5 class="font-bold">Sarah Jenkins</h5>
+<span class="material-symbols-outlined text-amber-500 text-[16px]" data-icon="verified" data-weight="fill">verified</span>
+</div>
+<p class="text-xs text-on-surface-variant">Verified Parent • 3 Children</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="h-4 w-3/4 bg-stone-100 rounded"></div>
+<div class="h-4 w-full bg-stone-100 rounded"></div>
+<div class="h-4 w-1/2 bg-stone-100 rounded"></div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-tighter">Vouching Score: 98%</span>
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white bg-stone-200"></div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-stone-200"></div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-stone-200"></div>
+</div>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -top-4 -right-4 bg-primary text-on-primary p-4 rounded-2xl shadow-lg transform rotate-6">
+<span class="material-symbols-outlined block text-3xl" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1 block">Safe Connect</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fito Guide (AI Assistant) Floating Component -->
+<div class="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-[100] group">
+<div class="fito-gradient p-4 rounded-full shadow-2xl cursor-pointer hover:scale-110 active:scale-95 transition-all relative">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="psychology">psychology</span>
+<div class="absolute inset-0 rounded-full animate-pulse bg-white/20"></div>
+</div>
+<div class="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+<div class="glass-guide p-4 rounded-2xl shadow-xl border border-white/50 w-64 text-sm font-medium text-on-background">
+                "Hi! I'm Fito. Need help finding a local pod for 2nd grade math?"
+            </div>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 z-50 border-t border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Footer (Simplified for Landing) -->
+<footer class="bg-surface-container-high py-12 mt-12 pb-32 md:pb-12">
+<div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-amber-600" data-icon="diversity_3">diversity_3</span>
+<span class="text-lg font-extrabold text-amber-600 font-lexend">Meet Fito</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-xs">Connecting families to create better, safer, and more social homeschooling experiences for the next generation.</p>
+</div>
+<div>
+<h5 class="font-bold mb-4">Platform</h5>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Find Groups</a></li>
+<li><a class="hover:text-primary" href="#">Start a Co-Op</a></li>
+<li><a class="hover:text-primary" href="#">Safety Guidelines</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4">Community</h5>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Parent Stories</a></li>
+<li><a class="hover:text-primary" href="#">Resource Hub</a></li>
+<li><a class="hover:text-primary" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-6 mt-12 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between text-[11px] font-medium text-stone-400 gap-4">
+<p>© 2024 Meet Fito. All rights reserved. Built for parents, by parents.</p>
+<div class="flex gap-6 uppercase tracking-widest">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+<a href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

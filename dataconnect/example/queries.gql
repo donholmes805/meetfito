@@ -1,0 +1,26 @@
+mutation CreateNewUser($email: String!, $name: String!) @auth(level: PUBLIC, insecureReason: "This operation allows public user registration.") {
+  user_insert(data: {email: $email, name: $name})
+}
+
+query GetMyProfile @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    id
+    name
+    email
+  }
+}
+
+mutation CreateProductForCurrentUser($name: String!, $price: Float!, $description: String) @auth(level: USER) {
+  product_insert(data: {name: $name, price: $price, sellerId_expr: "auth.uid", description: $description})
+}
+
+query ListProductsBySeller($sellerId: UUID!) @auth(level: PUBLIC, insecureReason: "This operation allows public viewing of products by seller.") {
+  products(where: {sellerId: {eq: $sellerId}}) {
+    id
+    name
+    price
+    seller {
+      name
+    }
+  }
+}

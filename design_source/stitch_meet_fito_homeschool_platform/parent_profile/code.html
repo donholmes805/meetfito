@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#386b01",
+                      "secondary-fixed-dim": "#9cd769",
+                      "surface": "#fff8f6",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#643f00",
+                      "on-background": "#2c160e",
+                      "tertiary-fixed": "#cee5ff",
+                      "outline": "#857462",
+                      "on-secondary-fixed": "#0d2000",
+                      "on-secondary-fixed-variant": "#285000",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#b7f481",
+                      "surface-container-highest": "#ffdbd0",
+                      "secondary-container": "#b7f481",
+                      "on-secondary-container": "#3e7109",
+                      "tertiary-fixed-dim": "#96ccff",
+                      "primary-fixed": "#ffddb5",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#001d32",
+                      "on-tertiary-fixed-variant": "#004a75",
+                      "on-tertiary-container": "#004d79",
+                      "on-primary-container": "#674100",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#ffede8",
+                      "on-error": "#ffffff",
+                      "surface-container": "#ffe9e3",
+                      "background": "#fff8f6",
+                      "inverse-primary": "#ffb957",
+                      "inverse-surface": "#442a22",
+                      "tertiary-container": "#76bfff",
+                      "surface-variant": "#ffdbd0",
+                      "surface-dim": "#fbd1c4",
+                      "outline-variant": "#d7c3ae",
+                      "primary-fixed-dim": "#ffb957",
+                      "error": "#ba1a1a",
+                      "tertiary": "#00639a",
+                      "error-container": "#ffdad6",
+                      "primary": "#835400",
+                      "surface-tint": "#835400",
+                      "on-surface-variant": "#524434",
+                      "primary-container": "#f9a825",
+                      "surface-container-low": "#fff1ed",
+                      "surface-container-high": "#ffe2da",
+                      "on-primary-fixed": "#2a1800",
+                      "surface-bright": "#fff8f6",
+                      "on-surface": "#2c160e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "mobile-margin": "24px",
+                      "base": "8px",
+                      "desktop-margin": "auto",
+                      "section-gap": "32px",
+                      "max-width": "1200px",
+                      "card-padding": "20px"
+              },
+              "fontFamily": {
+                      "display": ["Lexend"],
+                      "body-md": ["Lexend"],
+                      "h1": ["Lexend"],
+                      "body-lg": ["Lexend"],
+                      "label-caps": ["Lexend"],
+                      "badge-text": ["Lexend"],
+                      "h2": ["Lexend"]
+              },
+              "fontSize": {
+                      "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                      "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f6;
+            font-family: 'Lexend', sans-serif;
+        }
+        .fito-guide-glass {
+            background: rgba(124, 58, 237, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-stone-50/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-stone-200">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600" data-icon="diversity_3">diversity_3</span>
+<h1 class="text-xl font-extrabold text-amber-600 tracking-tight font-lexend">Meet Fito</h1>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 text-amber-600 hover:bg-amber-100 transition-colors font-lexend font-bold text-sm">
+                Ask Fito Guide
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-mobile-margin md:px-desktop-margin py-8 pb-32">
+<!-- Profile Header Section -->
+<section class="mb-section-gap">
+<div class="bg-surface-container-lowest rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)] border border-stone-100">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+<div class="relative">
+<img class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" data-alt="A professional and warm portrait of a smiling woman in her late 30s with friendly eyes, set against a soft-focus outdoor garden background. The lighting is warm and golden hour-inspired, emphasizing a modern-tactile aesthetic with organic professionalism. The color palette features soft creams, earthy browns, and natural greens, creating a safe and welcoming community-focused atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1tTTTVP6W8byELh3oGacwi0qQwbq0J2UpfEiJF1Vjr8WZXpdYozUMQst3N5M7ylp9bNaFYjGDAGCQr0eCzEUkyXffpp5b4mxrymV1JHuXqAt0-wOQMBcdXJNR57WRjg0rPu68IOA-e9qmvCOmSCUIukHbtGh97FIj6DvVcM_YaPjcIphgileturOJ622P4KltElNlLixHUVgZwHY81BYzizzMyiQoP7zvr5Bx8qEpHuGY9JcEugxTAA_MHH8okUgqxDgk-pzztDpe"/>
+<div class="absolute bottom-1 right-1 bg-white p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-2xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row items-center gap-3 mb-2">
+<h2 class="font-h1 text-h1 text-on-background">Sarah Jenkins</h2>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-primary-container/20 rounded-full border border-primary-container/30">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-badge-text text-badge-text text-primary uppercase tracking-wider">Verified Parent</span>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start gap-2 text-outline mb-4">
+<span class="material-symbols-outlined text-[20px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Austin, Texas</span>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-2">
+<button class="bg-secondary text-on-primary px-6 py-2 rounded-full font-display font-bold text-sm shadow-sm hover:opacity-90 transition-opacity">Edit Profile</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-display font-bold text-sm hover:bg-surface-container-high transition-colors">Share Profile</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Children Profiles -->
+<div class="md:col-span-8 bg-white rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-h2 text-h2 text-on-background">Children</h3>
+<button class="text-secondary font-bold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_circle">add_circle</span>
+                        Add Child
+                    </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-stone-100">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="child_care">child_care</span>
+</div>
+<div>
+<p class="font-display font-bold text-on-background">Leo Jenkins</p>
+<p class="font-body-md text-sm text-outline">Age 7 • Grade 2</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-stone-100">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="child_friendly">child_friendly</span>
+</div>
+<div>
+<p class="font-display font-bold text-on-background">Maya Jenkins</p>
+<p class="font-body-md text-sm text-outline">Age 4 • Preschool</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interests Tags -->
+<div class="md:col-span-4 bg-white rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)]">
+<h3 class="font-h2 text-h2 text-on-background mb-4">Interests</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-body-md text-sm">Nature Walks</span>
+<span class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-body-md text-sm">STEM Learning</span>
+<span class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-body-md text-sm">Early Literacy</span>
+<span class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-body-md text-sm">Homeschooling</span>
+<span class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-body-md text-sm">Art Crafts</span>
+</div>
+</div>
+<!-- Joined Groups -->
+<div class="md:col-span-12 lg:col-span-7 bg-white rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-h2 text-h2 text-on-background">Joined Groups</h3>
+<a class="text-secondary font-bold text-sm" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-16 h-16 rounded-xl object-cover" data-alt="A lush green park scene with a group of diverse parents and children sitting on a picnic blanket, surrounded by tall oak trees. The lighting is soft and dappled, creating a peaceful and community-oriented feel. The colors are dominated by organic greens and warm sun-kissed browns, maintaining a modern-tactile aesthetic suitable for an educational community platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBgAr9Aj9mnxPm7KinE7FKx1jbU53rLekCOj5-IwjtPKKvytfX4Z-E_XHC0n5GAlEohgTkvNIM0lcVFmE20bg5lthL8I2NMF0BXQ603UuGO5Yu0GryTUa8lj4qeJXmQzXVQjT-Fw7D0wDl1yUiqMx4N4wPPFcD4365aYlXPCJnxuvHKEjCF1W1gSGcfTy87MOJpRun_53x2Fi_SHCiRGQu5tKs6gdXAkz73gPZMGKbfgLL164KVaecOx0nEoChJdBtiNmYnfQ7ykkc"/>
+<div class="flex-1">
+<h4 class="font-display font-bold text-on-background group-hover:text-secondary transition-colors">Austin Nature Explorers</h4>
+<p class="font-body-md text-sm text-outline">124 Members • Active today</p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="w-full h-px bg-stone-100"></div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-16 h-16 rounded-xl object-cover" data-alt="A brightly lit, modern classroom or library setting with colorful educational toys and books on white wooden shelves. The scene is clean, organized, and vibrant, featuring soft pastels and primary colors that feel professional yet approachable. The high-key lighting creates a breathable and stress-free visual experience for parents managing homeschooling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtHzEDuEKqr6ZCCFEPphGEYYzi7PMU5Y0Uzv8hXiyROZfwJsjHEdlF0vXqSjcgkCtTaq4vc-jC0a-796BcjIpZqi147Kgso-wX6UifY__A1v6sb3OlHlvv1eMyt8oQ-HvGbqyd7EiOOYqWvYYfeVBKgbOayR_ZCzk19ZsOBp5jOdU0DOweY7FD1cyfldqIiuM4AQZZjPpC9D4TYV7Vptuob6xyTXgXIovYO3FrPdVapQm7WpbcaKTH_RjO6nosHIgBmJxtc2ceeuAg"/>
+<div class="flex-1">
+<h4 class="font-display font-bold text-on-background group-hover:text-secondary transition-colors">STEM Parents Collective</h4>
+<p class="font-body-md text-sm text-outline">89 Members • Meets Weekly</p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Account Safety & Settings -->
+<div class="md:col-span-12 lg:col-span-5 flex flex-col gap-6">
+<div class="bg-white rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)] border-l-4 border-amber-400">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-amber-50 rounded-lg">
+<span class="material-symbols-outlined text-amber-600" data-icon="security">security</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-on-background mb-1">Account Safety</h3>
+<p class="font-body-md text-sm text-outline mb-4">Manage your privacy settings and verified status to keep your family's data secure.</p>
+<a class="inline-flex items-center gap-2 text-amber-700 font-bold text-sm bg-amber-100/50 px-4 py-2 rounded-lg hover:bg-amber-100 transition-colors" href="#">
+                                Safety Settings
+                                <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-card-padding shadow-[0_4px_12px_rgba(58,40,22,0.05)]">
+<h3 class="font-display font-bold text-on-background mb-4">Quick Links</h3>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+                                Notification Preferences
+                            </span>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="settings">settings</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="contact_support">contact_support</span>
+                                Help &amp; Support
+                            </span>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fito Guide AI Assistant -->
+<div class="fixed bottom-24 right-6 z-[60]">
+<button class="w-14 h-14 rounded-full fito-guide-glass flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+<div class="relative">
+<span class="material-symbols-outlined text-amber-600 text-3xl" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse"></span>
+</div>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-lg border-t border-stone-100 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] z-50">
+<div class="flex justify-around items-center px-4 pt-2 pb-6">
+<a class="flex flex-col items-center justify-center text-stone-500 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-3 py-1 hover:text-green-600" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-700 bg-green-50 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

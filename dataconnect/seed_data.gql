@@ -1,0 +1,49 @@
+mutation CreateDemoData @transaction @auth(level: USER, insecureReason: "Seed data operations are only run by authenticated administrators.") {
+  user_insertMany(data: [
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      email: "alice@example.com",
+      name: "Alice"
+    },
+    {
+      id: "b1cde011-0d1c-5fa9-cc7e-7cc0ce491b22",
+      email: "bob@example.com",
+      name: "Bob"
+    }
+  ])
+  product_insertMany(data: [
+    {
+      id: "c2def122-1e2d-6fb0-dd8f-8dd1df5a2c33",
+      name: "Laptop",
+      description: "Powerful laptop for professionals",
+      price: 1200.00,
+      sellerId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
+    },
+    {
+      id: "d3efg233-2f3e-7gc1-ee90-9ee2eg6b3d44",
+      name: "Mouse",
+      description: "Ergonomic wireless mouse",
+      price: 25.00,
+      sellerId: "b1cde011-0d1c-5fa9-cc7e-7cc0ce491b22"
+    }
+  ])
+  order_insertMany(data: [
+    {
+      id: "e4fgh344-3g4f-8hd2-ff01-0ff3fh7c4e55",
+      orderDate: "2023-10-26T10:00:00Z",
+      customerId: "b1cde011-0d1c-5fa9-cc7e-7cc0ce491b22"
+    }
+  ])
+  orderItem_insertMany(data: [
+    {
+      orderId: "e4fgh344-3g4f-8hd2-ff01-0ff3fh7c4e55",
+      productId: "c2def122-1e2d-6fb0-dd8f-8dd1df5a2c33",
+      quantity: 1
+    },
+    {
+      orderId: "e4fgh344-3g4f-8hd2-ff01-0ff3fh7c4e55",
+      productId: "d3efg233-2f3e-7gc1-ee90-9ee2eg6b3d44",
+      quantity: 2
+    }
+  ])
+}

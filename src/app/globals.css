@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", sans-serif;
+  
+  --color-primary: #835400;
+  --color-primary-container: #f9a825;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #674100;
+  
+  --color-secondary: #386b01;
+  --color-secondary-container: #b7f481;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #3e7109;
+  
+  --color-tertiary: #00639a;
+  --color-tertiary-container: #76bfff;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #004d79;
+  
+  --color-background: #fff8f6;
+  --color-on-background: #2c160e;
+  
+  --color-surface: #fff8f6;
+  --color-on-surface: #2c160e;
+  --color-surface-variant: #ffdbd0;
+  --color-on-surface-variant: #524434;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1ed;
+  --color-surface-container: #ffe9e3;
+  --color-surface-container-high: #ffe2da;
+  --color-surface-container-highest: #ffdbd0;
+  
+  --color-outline: #857462;
+  --color-outline-variant: #d7c3ae;
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+:root {
+  --background: #fff8f6;
+  --foreground: #2c160e;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-lexend antialiased;
+  }
+}
+
+@layer utilities {
+  .fito-gradient {
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  }
+  .glass-guide {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

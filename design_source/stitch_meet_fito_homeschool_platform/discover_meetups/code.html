@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover - Meet Fito</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#386b01",
+                        "secondary-fixed-dim": "#9cd769",
+                        "surface": "#fff8f6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#643f00",
+                        "on-background": "#2c160e",
+                        "tertiary-fixed": "#cee5ff",
+                        "outline": "#857462",
+                        "on-secondary-fixed": "#0d2000",
+                        "on-secondary-fixed-variant": "#285000",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#b7f481",
+                        "surface-container-highest": "#ffdbd0",
+                        "secondary-container": "#b7f481",
+                        "on-secondary-container": "#3e7109",
+                        "tertiary-fixed-dim": "#96ccff",
+                        "primary-fixed": "#ffddb5",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "on-tertiary-container": "#004d79",
+                        "on-primary-container": "#674100",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#ffede8",
+                        "on-error": "#ffffff",
+                        "surface-container": "#ffe9e3",
+                        "background": "#fff8f6",
+                        "inverse-primary": "#ffb957",
+                        "inverse-surface": "#442a22",
+                        "tertiary-container": "#76bfff",
+                        "surface-variant": "#ffdbd0",
+                        "surface-dim": "#fbd1c4",
+                        "outline-variant": "#d7c3ae",
+                        "primary-fixed-dim": "#ffb957",
+                        "error": "#ba1a1a",
+                        "tertiary": "#00639a",
+                        "error-container": "#ffdad6",
+                        "primary": "#835400",
+                        "surface-tint": "#835400",
+                        "on-surface-variant": "#524434",
+                        "primary-container": "#f9a825",
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-high": "#ffe2da",
+                        "on-primary-fixed": "#2a1800",
+                        "surface-bright": "#fff8f6",
+                        "on-surface": "#2c160e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "mobile-margin": "24px",
+                        "base": "8px",
+                        "desktop-margin": "auto",
+                        "section-gap": "32px",
+                        "max-width": "1200px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "h1": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Lexend"],
+                        "badge-text": ["Lexend"],
+                        "h2": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "badge-text": ["11px", {"lineHeight": "12px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-32">
+<!-- Top Navigation Bar -->
+<header class="bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500" data-icon="diversity_3">diversity_3</span>
+<h1 class="font-lexend font-bold tracking-tight text-xl text-amber-600 dark:text-amber-500">Meet Fito</h1>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full text-badge-text font-bold hover:bg-amber-50 transition-colors scale-95 duration-150 ease-in-out">
+                Ask Fito Guide
+            </button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-mobile-margin md:px-8 pt-6 space-y-6">
+<!-- Search & Quick Filters -->
+<section class="space-y-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-white rounded-2xl border border-stone-100 shadow-sm focus:ring-2 focus:ring-tertiary-container focus:border-tertiary outline-none transition-all font-body-md" placeholder="Search meetups, parks, or classes..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-3">
+<div class="flex-1 min-w-[140px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="location_on">location_on</span>
+<select class="w-full pl-10 pr-4 py-2 bg-white rounded-xl border border-stone-100 shadow-sm text-body-md appearance-none">
+<option>Austin, TX</option>
+<option>Round Rock, TX</option>
+<option>Cedar Park, TX</option>
+</select>
+</div>
+<div class="flex-1 min-w-[140px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="distance">distance</span>
+<select class="w-full pl-10 pr-4 py-2 bg-white rounded-xl border border-stone-100 shadow-sm text-body-md appearance-none">
+<option>Within 5 miles</option>
+<option>Within 10 miles</option>
+<option>Within 25 miles</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Category Chips -->
+<section class="overflow-x-auto hide-scrollbar -mx-mobile-margin px-mobile-margin">
+<div class="flex gap-2 min-w-max pb-2">
+<button class="px-5 py-2 rounded-full bg-secondary text-on-primary font-bold text-badge-text">All</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">Study</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">P.E.</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">Park Day</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">Field Trip</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">Co-Op</button>
+<button class="px-5 py-2 rounded-full bg-white border border-stone-100 text-on-surface-variant font-medium text-badge-text hover:bg-surface-container-low transition-colors">Social</button>
+</div>
+</section>
+<!-- Map Preview -->
+<section class="w-full h-48 md:h-64 rounded-3xl overflow-hidden relative border border-stone-200 shadow-inner">
+<div class="absolute inset-0 bg-[#e5e3df]" data-location="Austin, Texas" style="">
+<img class="w-full h-full object-cover opacity-60" data-alt="A stylized aerial map view of a vibrant suburban neighborhood with green parks and winding roads. The map uses a clean, light-mode aesthetic with soft organic colors, highlighting community centers and school zones with subtle amber and green markers. The overall lighting is bright and sunny, reflecting a safe and welcoming environment for local families." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4B1g6mu05B5p5ocIGkYSIx-aekVj4oUQu1_sSXIOeEXPDUrqWJ98wboUKtsDQQDGRT9agEHKeVEhxMxPdJ-1U6HcNeFt9wCHkE4L_ibCce9yMveWqJSTMgZvKvC-v-h5gg-nIjoVv4uwvA_0ZNLWZ3hjgkB6o3PS01itiGmtPY-5NVZEy6yns_wdySABPaFygGR-gFhNSREQCJNttzOlTIu7Rr1C8dQvO1MEbd-fm8ie6IK2xAVUlgFsWbEvlY7NPRdvJ1F82FINc"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/50 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="explore">explore</span>
+<span class="text-badge-text font-bold text-on-surface">Interactive Map View</span>
+</div>
+</div>
+<!-- Custom Markers -->
+<div class="absolute top-1/4 left-1/3 w-4 h-4 bg-secondary rounded-full border-2 border-white shadow-md"></div>
+<div class="absolute bottom-1/3 right-1/4 w-4 h-4 bg-primary rounded-full border-2 border-white shadow-md"></div>
+<div class="absolute top-1/2 left-1/2 w-4 h-4 bg-tertiary rounded-full border-2 border-white shadow-md"></div>
+</section>
+<!-- Event List -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="font-h2 text-h2 text-on-surface">Upcoming Meetups</h2>
+<span class="text-badge-text text-outline font-medium">24 events nearby</span>
+</div>
+<!-- Grid Layout for Desktop, List for Mobile -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Event Card 1 -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-50 flex flex-col group transition-transform hover:-translate-y-1">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="A joyful group of diverse children playing together in a sun-drenched public park during a homeschool meetup. The lighting is warm and golden, casting soft shadows on the vibrant green grass. The scene captures an atmosphere of community growth and safe social interaction, with parents visible but softly blurred in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Y9J26OX5KOEFGrGzmsEkfV04EZREwUl4rnYVIBOHfEiCAF7xh3TGG1Cw65BWOe_ipZqGee89OmcY6CTj-8KRwYARuQHIJdWwX-1OoipvBba3FPqD_eWYxB4XgIyz5Na9iPxz87_67xiaNiUNNqd1pgSdNGAW8cvKYdy9AE4p8PtGC5oHUuV82-lwbelJrSMDtBFgsy6Zi0UXyHokb5PtWtSfpnTrWsO2EOGQpojLB7dS6aRRgqqnKU6HvCO6Apc5NtfoOySBNh8j"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-bold text-on-surface">Verified Parent</span>
+</div>
+</div>
+<div class="p-card-padding space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-h2 text-body-lg font-bold text-on-surface">Weekly Nature Journaling</h3>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded-full font-bold">PARK DAY</span>
+</div>
+<div class="space-y-1 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+<span class="text-badge-text">Tues, Oct 24 • 10:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-badge-text">Zilker Metropolitan Park</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="child_care">child_care</span>
+<span class="text-badge-text">Ages 6-10</span>
+</div>
+</div>
+<div class="pt-2 flex gap-3">
+<button class="flex-1 bg-secondary text-on-primary py-3 rounded-xl font-display font-bold text-body-md transition-colors hover:bg-on-secondary-container">Join</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-stone-200 text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-50 flex flex-col group transition-transform hover:-translate-y-1">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="An organized indoor classroom setting for a homeschool co-op study session focusing on science and technology. The room is filled with bright, natural light from large windows, highlighting clean white desks and modern educational tools. The visual style is professional yet approachable, emphasizing a focused and structured learning environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4RRG5PiQtDs1jPQxlcL5Jjh1X1_WQxvgf6mw0mo7jl_hgHy9ls5QsIHVyIkUlA7JyZII4Yn0iomKHThwZ_uuPvb36jL-6boQKMHuj3EgPAHgmCvGhjhudKOpSS_xQlRq4p67iJpU3gaUtGkAOKjaD_ELtfRQD5rjfNnFkSsQy-mGnbaj80VWQ677U69Ul6GYo4Mpfre3IUzLzaGRc96_Efn6EM4JFRJGeZTzgEZiDZPuwty6nCik_U2Zwis6hqrhazM38ZcBarD5N"/>
+</div>
+<div class="p-card-padding space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-h2 text-body-lg font-bold text-on-surface">Intro to Robotics Workshop</h3>
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] px-2 py-1 rounded-full font-bold">CO-OP</span>
+</div>
+<div class="space-y-1 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+<span class="text-badge-text">Wed, Oct 25 • 2:00 PM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-badge-text">North Austin Library</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="child_care">child_care</span>
+<span class="text-badge-text">Ages 12-15</span>
+</div>
+</div>
+<div class="pt-2 flex gap-3">
+<button class="flex-1 bg-secondary text-on-primary py-3 rounded-xl font-display font-bold text-body-md transition-colors hover:bg-on-secondary-container">Join</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-stone-200 text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-white rounded-[16px] shadow-[0_4px_12px_rgba(93,64,55,0.05)] overflow-hidden border border-stone-50 flex flex-col group transition-transform hover:-translate-y-1">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="A dynamic outdoor sports field where a group of homeschool students are participating in a organized physical education class. The scene is bright with high-key lighting, showcasing a high-energy and healthy lifestyle. The aesthetic is clean and modern, focusing on teamwork and active learning in a safe neighborhood community setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZB4FH-FyEXP3E-r5dv8v2Xf18SvAOwjfn-J9i3sg1hSY2VDmkK9wC3V_LmMCuN2cihIqKOmVVgjKrpy3h2FW9_o4Y6Yp_q2yYP1WhzLktzARdl4fzXNCghY3MV93i0mrd5NJwgYK2CvJzsGItcYKfuNA5h9All4KZqqlKC-VLWzouHY1zWnJ9XeoFwoXvTQ-D_oRwnNQfwdZ_WGg6KxgxaNa_idymeAHikFHonN7mgxUf_y_SFQFVq6u1eTKkFhTaqHQTwxos575p"/>
+</div>
+<div class="p-card-padding space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-h2 text-body-lg font-bold text-on-surface">Community Field Day</h3>
+<span class="bg-surface-container-highest text-on-primary-container text-[10px] px-2 py-1 rounded-full font-bold">P.E.</span>
+</div>
+<div class="space-y-1 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+<span class="text-badge-text">Sat, Oct 28 • 9:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-badge-text">Mueller Lake Park</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="child_care">child_care</span>
+<span class="text-badge-text">All Ages</span>
+</div>
+</div>
+<div class="pt-2 flex gap-3">
+<button class="flex-1 bg-secondary text-on-primary py-3 rounded-xl font-display font-bold text-body-md transition-colors hover:bg-on-secondary-container">Join</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-stone-200 text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fito Guide FAB -->
+<button class="fixed bottom-24 right-6 w-16 h-16 rounded-full bg-gradient-to-tr from-violet-600 to-blue-500 shadow-xl flex items-center justify-center text-white z-50 transition-transform active:scale-90 animate-pulse">
+<span class="material-symbols-outlined text-[32px]" data-icon="smart_toy">smart_toy</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-stone-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(93,64,55,0.05)] z-50 rounded-t-2xl">
+<div class="flex justify-around items-center px-4 pt-2 pb-6 max-w-7xl mx-auto">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-lexend text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-lexend text-[11px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[11px] font-medium">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend text-[11px] font-medium">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-slate-400 px-3 py-1 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[11px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
